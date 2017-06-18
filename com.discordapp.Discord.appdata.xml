@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>com.discordapp.Discord.desktop</id>
+  <name>Discord</name>
+  <developer_name>Discord</developer_name>
+  <summary>Chat client</summary>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>LicenseRef-proprietary</project_license>
+  <url type="homepage">https://discordapp.com</url>
+  <screenshots>
+    <screenshot type="default">
+      <image type="source">https://support.discordapp.com/hc/en-us/article_attachments/206368357/MenuCircle.png</image>
+      <caption>Window</caption>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://support.discordapp.com/hc/en-us/article_attachments/206077828/FLFeathWindow.png</image>
+      <caption>Friends list</caption>
+    </screenshot>
+  </screenshots>
+  <kudos>
+    <kudo>HiDpiIcon</kudo>
+    <kudo>Notifications</kudo>
+  </kudos>
+  <update_contact>tingping_at_fedoraproject.org</update_contact>
+</component>
