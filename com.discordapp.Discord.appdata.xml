@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<component type="desktop">
-  <id>com.discordapp.Discord.desktop</id>
+<application>
+  <id type="desktop">com.discordapp.Discord.desktop</id>
   <name>Discord</name>
   <developer_name>Discord</developer_name>
   <summary>Chat client</summary>
@@ -22,4 +22,4 @@
     <kudo>Notifications</kudo>
   </kudos>
   <update_contact>tingping_at_fedoraproject.org</update_contact>
-</component>
+</application>
