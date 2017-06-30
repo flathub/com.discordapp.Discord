@@ -114,19 +114,7 @@
         }
       ],
       "modules": [
-        {
-          "name": "udev",
-          "config-opts": [ "--disable-hwdb", "--disable-logging", "--disable-gudev",
-                           "--disable-introspection", "--disable-keymap", "--disable-mtd_probe"],
-          "cleanup": ["/share", "/include", "/bin", "/sbin", "/lib/pkgconfig", "*.la"],
-          "sources": [
-            {
-              "type": "archive",
-              "url": "http://kernel.org/pub/linux/utils/kernel/hotplug/udev-175.tar.bz2",
-              "sha256": "4c7937fe5a1521316ea571188745b9a00a9fdf314228cffc53a7ba9e5968b7ab"
-            }
-          ]
-        },
+        "shared-modules/udev/udev-175.json",
         {
           "name": "gconf",
           "config-opts": ["--disable-orbit", "--disable-static", "--disable-introspection",
