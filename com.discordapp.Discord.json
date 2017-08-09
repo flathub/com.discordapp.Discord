@@ -16,7 +16,7 @@
       "--filesystem=xdg-pictures:ro",
       "--env=XDG_CURRENT_DESKTOP=Unity",
       "--talk-name=org.kde.StatusNotifierWatcher",
-      "--extra-data=discord.tar.gz:ba0ff3c57d7ab3a5e47a91bd23a79758085147e88fa0c65529bcf50a778fa382:50415125::https://dl.discordapp.net/apps/linux/0.0.1/discord-0.0.1.tar.gz"
+      "--extra-data=discord.tar.gz:dfc17ac6f683a45f896a4f881b900b2d46d74b0625cb661db1bfe39b33a06769:62357916::https://dl.discordapp.net/apps/linux/0.0.2/discord-0.0.2.tar.gz"
   ],
   "modules": [
     {
