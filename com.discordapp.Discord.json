@@ -128,6 +128,19 @@
                 "sha256": "1912b91803ab09a5eed34d364bf09fe3a2a9c96751fde03a4e0cfa51a04d784c"
             }
           ]
+        },
+        {
+          "name": "libcxx",
+          "buildsystem": "cmake",
+          "builddir": true,
+          "cleanup": ["/include", "/lib/*.a"],
+          "sources": [
+            {
+              "type": "archive",
+              "url": "https://releases.llvm.org/4.0.1/libcxx-4.0.1.src.tar.xz",
+              "sha256": "520a1171f272c9ff82f324d5d89accadcec9bc9f3c78de11f5575cdb99accc4c"
+            }
+          ]
         }
       ]
     }
