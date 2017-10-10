@@ -60,14 +60,49 @@
       "modules": [
         {
           "name": "libcxx",
-          "buildsystem": "cmake",
+          "buildsystem": "cmake-ninja",
           "builddir": true,
+          "make-args": ["cxx"],
+          "no-make-install": true,
+          "config-opts": [
+            "-DCMAKE_BUILD_TYPE=Release"
+          ],
           "cleanup": ["/include", "/lib/*.a"],
+          "build-commands": [
+            "ninja install-libcxxabi",
+            "ninja install-libcxx"
+          ],
           "sources": [
             {
               "type": "archive",
-              "url": "https://releases.llvm.org/4.0.1/libcxx-4.0.1.src.tar.xz",
-              "sha256": "520a1171f272c9ff82f324d5d89accadcec9bc9f3c78de11f5575cdb99accc4c"
+              "url": "https://releases.llvm.org/5.0.0/llvm-5.0.0.src.tar.xz",
+              "sha256": "e35dcbae6084adcf4abb32514127c5eabd7d63b733852ccdb31e06f1373136da"
+            },
+            {
+              "type": "archive",
+              "url": "https://releases.llvm.org/5.0.0/libcxx-5.0.0.src.tar.xz",
+              "sha256": "eae5981e9a21ef0decfcac80a1af584ddb064a32805f95a57c7c83a5eb28c9b1",
+              "dest": "projects/libcxx"
+            },
+            {
+              "type": "archive",
+              "url": "https://releases.llvm.org/5.0.0/libcxxabi-5.0.0.src.tar.xz",
+              "sha256": "176918c7eb22245c3a5c56ef055e4d69f5345b4a98833e0e8cb1a19cab6b8911",
+              "dest": "projects/libcxxabi"
+            }
+          ]
+        },
+        {
+          "name": "pciutils",
+          "disabled": true,
+          "no-autogen": true,
+          "make-args": ["SHARED=yes", "PREFIX=/app"],
+          "make-install-args": ["SHARED=yes", "PREFIX=/app"],
+          "sources": [
+            {
+              "type": "archive",
+              "url": "https://github.com/pciutils/pciutils/archive/v3.5.5.tar.gz",
+              "sha256": "07b9959d929248eeb274d8e8f7df33e2173f7eb7d49328a70366071f569fbade"
             }
           ]
         }
