@@ -1,5 +1,6 @@
 {
   "app-id": "com.discordapp.Discord",
+  "branch": "stable",
   "base": "io.atom.electron.BaseApp",
   "base-version": "stable",
   "runtime": "org.freedesktop.Platform",
@@ -17,8 +18,7 @@
       "--filesystem=xdg-videos:ro",
       "--filesystem=xdg-pictures:ro",
       "--env=XDG_CURRENT_DESKTOP=Unity",
-      "--talk-name=org.kde.StatusNotifierWatcher",
-      "--extra-data=discord.tar.gz:dfc17ac6f683a45f896a4f881b900b2d46d74b0625cb661db1bfe39b33a06769:62357916::https://dl.discordapp.net/apps/linux/0.0.2/discord-0.0.2.tar.gz"
+      "--talk-name=org.kde.StatusNotifierWatcher"
   ],
   "modules": [
     {
@@ -31,6 +31,13 @@
       ],
       "sources": [
         {
+          "type": "extra-data",
+          "filename": "discord.tar.gz",
+          "url": "https://dl.discordapp.net/apps/linux/0.0.2/discord-0.0.2.tar.gz",
+          "sha256": "dfc17ac6f683a45f896a4f881b900b2d46d74b0625cb661db1bfe39b33a06769",
+          "size": 62357916
+        },
+        {
           "type": "script",
           "dest-filename": "apply_extra",
           "commands": [
@@ -41,8 +48,7 @@
             "rmdir Discord",
             "mkdir -p export/share/applications",
             "sed -e 's/Icon=discord/Icon=com.discordapp.Discord/' -e 's|Exec=/usr/share/discord/Discord|Exec=discord|' discord.desktop > export/share/applications/com.discordapp.Discord.desktop",
-            "mkdir -p export/share/icons/hicolor/256x256/apps",
-            "cp discord.png export/share/icons/hicolor/256x256/apps/com.discordapp.Discord.png"
+            "install -Dm644 discord.png export/share/icons/hicolor/256x256/apps/com.discordapp.Discord.png"
           ]
         },
         {
