@@ -23,7 +23,7 @@
     <kudo>Notifications</kudo>
   </kudos>
   <releases>
-    <release> version="0.0.4" date="2018-01-08"</release>
+    <release version="0.0.4" date="2018-01-08"></release>
   </releases>
   <update_contact>tingping_at_fedoraproject.org</update_contact>
 </application>
