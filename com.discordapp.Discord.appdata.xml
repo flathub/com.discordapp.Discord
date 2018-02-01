@@ -25,6 +25,10 @@
     <kudo>HiDpiIcon</kudo>
     <kudo>Notifications</kudo>
   </kudos>
+  <categories>
+    <category>InstantMessaging</category>
+    <category>Network</category>
+  </categories>
   <releases>
     <release version="0.0.4" date="2018-01-08"/>
   </releases>
