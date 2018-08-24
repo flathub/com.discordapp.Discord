@@ -19,8 +19,7 @@
       "--filesystem=xdg-pictures:ro",
       "--filesystem=xdg-download",
       "--env=XDG_CURRENT_DESKTOP=Unity",
-      "--talk-name=org.kde.StatusNotifierWatcher",
-      "--env=TMPDIR=/var/tmp"
+      "--talk-name=org.kde.StatusNotifierWatcher"
   ],
   "modules": [
     {
@@ -57,7 +56,7 @@
           "type": "script",
           "dest-filename": "discord",
           "commands": [
-            "exec /app/extra/discord \"$@\""
+            "exec env TMPDIR=$XDG_CACHE_HOME /app/extra/discord \"$@\""
           ]
         },
         {
