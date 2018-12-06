@@ -1,5 +1,5 @@
 #!/bin/bash
-socat -d -d -d -v \
+socat $SOCAT_ARGS \
     UNIX-LISTEN:$XDG_RUNTIME_DIR/discord/ipc-0,forever,fork \
     UNIX-CONNECT:$XDG_RUNTIME_DIR/discord-ipc-0 \
     &
