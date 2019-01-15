@@ -35,9 +35,9 @@
         {
           "type": "extra-data",
           "filename": "discord.tar.gz",
-          "url": "https://dl.discordapp.net/apps/linux/0.0.5/discord-0.0.5.tar.gz",
-          "sha256": "2f4464bcea532673ca7b314dc2a1b7966f5d175e535a0254753f778dc559ef18",
-          "size": 71549222
+          "url": "https://dl.discordapp.net/apps/linux/0.0.6/discord-0.0.6.tar.gz",
+          "sha256": "44af482d51a1340a138bc39c5713b94f6f65fd0d7d76a62063c6f7881f69c2f7",
+          "size": 49965391
         },
         {
           "type": "script",
