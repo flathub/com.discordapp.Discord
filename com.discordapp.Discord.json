@@ -46,6 +46,7 @@
             "tar xf discord.tar.gz",
             "rm discord.tar.gz",
             "mv Discord/Discord discord",
+            "chmod +x discord",
             "mv Discord/* .",
             "rmdir Discord",
             "mkdir -p export/share/applications",
