@@ -20,6 +20,7 @@
       "--filesystem=xdg-download",
       "--filesystem=xdg-run/discord:create",
       "--env=XDG_CURRENT_DESKTOP=Unity",
+      "--talk-name=org.freedesktop.portal.Fcitx",
       "--talk-name=org.kde.StatusNotifierWatcher"
   ],
   "modules": [
