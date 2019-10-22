@@ -29,6 +29,7 @@
       "name": "discord",
       "buildsystem": "simple",
       "build-commands": [
+        "install -Dm644 com.discordapp.Discord.appdata.xml /app/share/appdata/com.discordapp.Discord.appdata.xml",
         "install -Dm755 discord.sh /app/bin/discord",
         "mv Discord /app/discord",
         "chmod +x /app/discord/Discord",
