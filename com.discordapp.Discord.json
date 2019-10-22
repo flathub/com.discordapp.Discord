@@ -1,6 +1,5 @@
 {
   "app-id": "com.discordapp.Discord",
-  "branch": "stable",
   "base": "org.electronjs.Electron2.BaseApp",
   "base-version": "19.08",
   "runtime": "org.freedesktop.Platform",
@@ -8,51 +7,41 @@
   "sdk": "org.freedesktop.Sdk",
   "command": "discord",
   "separate-locales": false,
-  "tags": ["proprietary"],
+  "tags": [
+    "proprietary"
+  ],
   "finish-args": [
-      "--share=ipc", "--socket=x11",
-      "--socket=pulseaudio",
-      "--share=network",
-      "--device=all",
-      "--talk-name=org.freedesktop.Notifications",
-      "--filesystem=xdg-videos:ro",
-      "--filesystem=xdg-pictures:ro",
-      "--filesystem=xdg-download",
-      "--env=XDG_CURRENT_DESKTOP=Unity",
-      "--talk-name=org.freedesktop.portal.Fcitx",
-      "--talk-name=org.kde.StatusNotifierWatcher"
+    "--share=ipc",
+    "--socket=x11",
+    "--socket=pulseaudio",
+    "--share=network",
+    "--device=all",
+    "--talk-name=org.freedesktop.Notifications",
+    "--filesystem=xdg-videos:ro",
+    "--filesystem=xdg-pictures:ro",
+    "--filesystem=xdg-download",
+    "--env=XDG_CURRENT_DESKTOP=Unity",
+    "--talk-name=org.freedesktop.portal.Fcitx",
+    "--talk-name=org.kde.StatusNotifierWatcher"
   ],
   "modules": [
     {
       "name": "discord",
       "buildsystem": "simple",
       "build-commands": [
-        "install -D apply_extra /app/bin/apply_extra",
-        "install -D discord.sh /app/bin/discord",
-        "install -Dm644 com.discordapp.Discord.appdata.xml /app/share/appdata/com.discordapp.Discord.appdata.xml"
+        "install -Dm755 discord.sh /app/bin/discord",
+        "mv Discord /app/discord",
+        "chmod +x /app/discord/Discord",
+        "install -d /app/share/applications",
+        "sed -e 's/Icon=discord/Icon=com.discordapp.Discord/' -e 's|Exec=/usr/share/discord/Discord|Exec=discord|' /app/discord/discord.desktop > /app/share/applications/${FLATPAK_ID}.desktop",
+        "install -Dm644 /app/discord/discord.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png"
       ],
       "sources": [
         {
-          "type": "extra-data",
-          "filename": "discord.tar.gz",
+          "type": "archive",
           "url": "https://dl.discordapp.net/apps/linux/0.0.9/discord-0.0.9.tar.gz",
           "sha256": "4e5b955768cb35c0d1564e3bfb174470efc97028a1c38046770266105a440ec4",
-          "size": 61079489
-        },
-        {
-          "type": "script",
-          "dest-filename": "apply_extra",
-          "commands": [
-            "tar xf discord.tar.gz",
-            "rm discord.tar.gz",
-            "mv Discord/Discord discord",
-            "chmod +x discord",
-            "mv Discord/* .",
-            "rmdir Discord",
-            "mkdir -p export/share/applications",
-            "sed -e 's/Icon=discord/Icon=com.discordapp.Discord/' -e 's|Exec=/usr/share/discord/Discord|Exec=discord|' discord.desktop > export/share/applications/com.discordapp.Discord.desktop",
-            "install -Dm644 discord.png export/share/icons/hicolor/256x256/apps/com.discordapp.Discord.png"
-          ]
+          "strip-components": 0
         },
         {
           "type": "file",
@@ -68,12 +57,17 @@
           "name": "libcxx",
           "buildsystem": "cmake-ninja",
           "builddir": true,
-          "make-args": ["cxx"],
+          "make-args": [
+            "cxx"
+          ],
           "no-make-install": true,
           "config-opts": [
             "-DCMAKE_BUILD_TYPE=Release"
           ],
-          "cleanup": ["/include", "/lib/*.a"],
+          "cleanup": [
+            "/include",
+            "/lib/*.a"
+          ],
           "build-commands": [
             "ninja install-libcxxabi",
             "ninja install-libcxx"
@@ -102,8 +96,14 @@
           "name": "pciutils",
           "disabled": true,
           "no-autogen": true,
-          "make-args": ["SHARED=yes", "PREFIX=/app"],
-          "make-install-args": ["SHARED=yes", "PREFIX=/app"],
+          "make-args": [
+            "SHARED=yes",
+            "PREFIX=/app"
+          ],
+          "make-install-args": [
+            "SHARED=yes",
+            "PREFIX=/app"
+          ],
           "sources": [
             {
               "type": "archive",
