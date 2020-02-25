@@ -5,5 +5,5 @@ socat $SOCAT_ARGS \
     UNIX-CONNECT:$XDG_RUNTIME_DIR/discord-ipc-0 \
     &
 socat_pid=$!
-env TMPDIR=$XDG_CACHE_HOME /app/discord/Discord "$@"
+env TMPDIR=$XDG_CACHE_HOME /app/discord/Discord --no-sandbox "$@"
 kill -SIGTERM $socat_pid
