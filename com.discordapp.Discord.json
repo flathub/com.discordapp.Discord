@@ -33,7 +33,7 @@
         "mv Discord /app/discord",
         "chmod +x /app/discord/Discord",
         "install -d /app/share/applications",
-        "sed -e 's/Icon=discord/Icon=com.discordapp.Discord/' -e 's|Exec=/usr/share/discord/Discord|Exec=discord|' /app/discord/discord.desktop > /app/share/applications/${FLATPAK_ID}.desktop",
+        "sed -e 's/Icon=discord/Icon=com.discordapp.Discord/' -e 's|Exec=/usr/share/discord/Discord|Exec=discord --no-sandbox|' /app/discord/discord.desktop > /app/share/applications/${FLATPAK_ID}.desktop",
         "install -Dm644 /app/discord/discord.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png",
         "install -Dm644 com.discordapp.Discord.appdata.xml /app/share/appdata/com.discordapp.Discord.appdata.xml"
       ],
