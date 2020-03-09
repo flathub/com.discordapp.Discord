@@ -108,8 +108,8 @@
           "sources": [
             {
               "type": "archive",
-              "url": "https://github.com/pciutils/pciutils/archive/v3.5.5.tar.gz",
-              "sha256": "07b9959d929248eeb274d8e8f7df33e2173f7eb7d49328a70366071f569fbade"
+              "url": "https://github.com/pciutils/pciutils/archive/v3.6.4.tar.gz",
+              "sha256": "551d0ac33f030868b7e95c29e58dc2b1882455dbc9c15c15adf7086e664131f1"
             }
           ]
         },
@@ -118,8 +118,8 @@
           "sources": [
             {
               "type": "archive",
-              "url": "http://www.dest-unreach.org/socat/download/socat-1.7.3.2.tar.gz",
-              "sha256": "ce3efc17e3e544876ebce7cd6c85b3c279fda057b2857fcaaf67b9ab8bdaf034"
+              "url": "http://www.dest-unreach.org/socat/download/socat-1.7.3.4.tar.gz",
+              "sha256": "d9ed2075abed7b3ec9730ed729b4c8e287c502181c806d4487020418a6e2fc36"
             }
           ]
         }
