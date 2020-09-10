@@ -41,8 +41,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://dl.discordapp.net/apps/linux/0.0.11/discord-0.0.11.tar.gz",
-          "sha256": "a474761d72ee3fb7fdd31aefc441fc5aa953a2f5dcbe8c30f14fbe105fe458e9",
+          "url": "https://dl.discordapp.net/apps/linux/0.0.12/discord-0.0.12.tar.gz",
+          "sha256": "68f2cd3c397b5c54b15b08f0d873e14e569da024b12c2e56585fa1cb10db3f63",
           "strip-components": 0
         },
         {
