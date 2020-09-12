@@ -2,23 +2,45 @@
 <application>
   <id type="desktop">com.discordapp.Discord.desktop</id>
   <name>Discord</name>
-  <developer_name>Discord</developer_name>
-  <summary>Chat client</summary>
+  <developer_name>Discord Inc.</developer_name>
+  <summary>Messaging, Voice, and Video Client</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LicenseRef-proprietary</project_license>
-  <url type="homepage">https://discordapp.com</url>
-  <icon type="remote" height="256" width="256">https://lh3.googleusercontent.com/_4zBNFjA8S9yjNB_ONwqBvxTvyXYdC7Nh1jYZ2x6YEcldBr2fyijdjM2J5EoVdTpnkA=w256</icon>
+  <url type="homepage">https://discord.com</url>
+  <icon type="remote" height="256" width="256">https://discord.com/assets/2c21aeda16de354ba5334551a883b481.png</icon>
   <description>
-    <p>All-in-one voice and text chat for gamers that's free, secure, and works on both your desktop and phone. Stop paying for TeamSpeak servers and hassling with Skype. Simplify your life.</p>
+    <p>Discord is a free all in one messaging, voice, and video client thats available on your computer and phone.</p>
+    <p>Whether you’re part of a school club, gaming group, worldwide art community, or just a handful of friends that want to spend time together, Discord makes it easy to talk every day and hang out more often.</p>
+    <ul>
+      <li>Talk to your friends with messaging, voice, and video in a "Direct Message" (1 other person), group chat (up to 10 people), or a multi-channel server (practically infinite maximum members).</li>
+      <li>Discord servers are organized into topic-based channels where you can collaborate, share, and just talk about your day without clogging up a group chat.</li>
+      <li>Grab a seat in a voice channel when you’re free. Friends in your server can see you’re around and instantly pop in to talk without having to call.</li>
+      <li>Get a community of any size running with moderation tools and custom member access. Give members special powers, set up private channels, and more.</li>
+      <li>Low-latency voice and video feels like you’re in the same room. Wave hello over video, watch friends stream their games, or gather up and have a drawing session with screen share.</li>
+      <li>Available on Linux, macOS, Windows, iOS, Android, and your web browser.</li>
+    </ul>
+    <p>Discord is written in Javascript, React, Elixir, and Rust. The desktop application uses the electron framework.</p>
   </description>
   <screenshots>
     <screenshot type="default">
-      <image type="source">https://support.discordapp.com/hc/en-us/article_attachments/206368357/MenuCircle.png</image>
-      <caption>Main window</caption>
+      <image type="source">https://discord.com/assets/882599fca31a23ad38bd47db302b2a00.png</image>
+      <caption>Talk on an invite only server</caption>
     </screenshot>
     <screenshot>
-      <image type="source">https://support.discordapp.com/hc/en-us/article_attachments/206077828/FLFeathWindow.png</image>
-      <caption>Friends list</caption>
+      <image type="source">https://discord.com/assets/43fb8531fc13f02eb5f3c3e16d7fd1a7.png</image>
+      <caption>Voice and Video</caption>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://discord.com/assets/8626705c42db1fee19fc95fff7480bf8.png</image>
+      <caption>Dark Mode Window</caption>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://discord.com/assets/783ec8164addfd314cab6b0fa4ef6fc5.png</image>
+      <caption>Light Mode Window</caption>
+    </screenshot>
+    <screenshot>
+      <image type="source">https://discord.com/assets/489dc2b446be5c305571ad96b845c776.png</image>
+      <caption>Available on Linux, macOS, Windows, iOS, Android, and your web browser</caption>
     </screenshot>
   </screenshots>
   <kudos>
