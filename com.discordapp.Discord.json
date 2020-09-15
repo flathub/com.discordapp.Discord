@@ -43,7 +43,12 @@
           "type": "archive",
           "url": "https://dl.discordapp.net/apps/linux/0.0.12/discord-0.0.12.tar.gz",
           "sha256": "68f2cd3c397b5c54b15b08f0d873e14e569da024b12c2e56585fa1cb10db3f63",
-          "strip-components": 0
+          "strip-components": 0,
+          "x-checker-data": {
+            "type": "rotating-url",
+            "url": "https://discord.com/api/download?platform=linux&format=tar.gz",
+            "pattern": "https://dl.discordapp.net/apps/linux/([0-9.]+)/discord-([0-9.]+).tar.gz"
+          }
         },
         {
           "type": "file",
