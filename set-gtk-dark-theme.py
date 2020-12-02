@@ -152,11 +152,18 @@ if __name__ == "__main__":
     xdg_config_home = os.environ.get("XDG_CONFIG_HOME") or os.path.join(
         os.path.expanduser("~"), ".config"
     )
-    with open(
-        os.path.join(xdg_config_home, "discord", "settings.json"),
-        "r",
-    ) as settings_file:
-        # Read config file and set the dark titlebar if dark theme is enabled
-        settings = json.load(settings_file)
-        if settings["BACKGROUND_COLOR"] == "#202225":
-            main()
+    try:
+        with open(
+            os.path.join(xdg_config_home, "discord", "settings.json"),
+            "r",
+        ) as settings_file:
+            # Read config file and set the dark titlebar if dark theme is enabled
+            settings = json.load(settings_file)
+            if settings["BACKGROUND_COLOR"] == "#202225":
+                main()
+    except OSError as e:
+        print(f"Error opening settings.json: {e}")
+    except json.decoder.JSONDecodeError as e:
+        print(f"Error reading settings.json: {e}")
+    except KeyError as e:
+        print(f"Error reading dictionary property: {e}")
