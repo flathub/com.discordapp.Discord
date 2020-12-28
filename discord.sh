@@ -5,5 +5,6 @@ socat $SOCAT_ARGS \
     UNIX-CONNECT:$XDG_RUNTIME_DIR/discord-ipc-0 \
     &
 socat_pid=$!
+set-gtk-dark-theme.py &
 env TMPDIR=$XDG_CACHE_HOME zypak-wrapper /app/discord/Discord "$@"
 kill -SIGTERM $socat_pid

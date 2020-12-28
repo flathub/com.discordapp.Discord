@@ -27,10 +27,35 @@
     ],
     "modules": [
         {
+            "name": "xprop",
+            "sources": [
+                {
+                "type": "archive",
+                "url": "https://xorg.freedesktop.org/archive/individual/app/xprop-1.2.4.tar.bz2",
+                "sha256": "8c77fb096e46c60032b7e2bde9492c3ffcc18734f50b395085a5f10bfd3cf753"
+                }
+            ]
+        },
+        {
+            "name": "python3-XLib",
+            "buildsystem": "simple",
+            "build-commands": [
+              "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} XLib"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/3f/00/321541273b0ed2167b36c82be9baeb0bdc8af1c11c1b01de9436b84b5eaf/xlib-0.21-py2.py3-none-any.whl",
+                    "sha256": "8eee67dad83ef4b82bbbfa85d51eeb20c79d12b119fe25aa1d27bd602ff82212"
+                }
+            ]
+        },
+        {
             "name": "discord",
             "buildsystem": "simple",
             "build-commands": [
                 "install -Dm755 discord.sh /app/bin/discord",
+                "install -Dm755 set-gtk-dark-theme.py /app/bin",
                 "mv Discord /app/discord",
                 "chmod +x /app/discord/Discord",
                 "install -d /app/share/applications",
@@ -58,6 +83,10 @@
                 {
                     "type": "file",
                     "path": "com.discordapp.Discord.appdata.xml"
+                },
+                {
+                    "type": "file",
+                    "path": "set-gtk-dark-theme.py"
                 }
             ],
             "modules": [
@@ -134,3 +163,5 @@
         }
     ]
 }
+
+
