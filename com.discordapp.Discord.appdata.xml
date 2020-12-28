@@ -52,6 +52,7 @@
     <category>Network</category>
   </categories>
   <releases>
+    <release version="0.0.13" date="2020-12-04"/>
     <release version="0.0.12" date="2020-09-10"/>
   </releases>
   <content_rating type="oars-1.1">
