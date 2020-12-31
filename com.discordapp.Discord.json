@@ -27,6 +27,27 @@
     ],
     "modules": [
         {
+            "name": "twemoji-fonts",
+            "buildsystem": "simple",
+            "sources": [
+                {
+                    "type": "file",
+                    "path": "emoji-font.conf"
+                },
+                {
+                    "type": "file",
+                    "path": "Twemoji.ttf"
+                }
+            ],
+            "build-commands": [
+                "mkdir -p /app/share/fonts/",
+                "cp Twemoji.ttf /app/share/fonts/",
+                "mkdir -p /app/etc/fonts/",
+                "cp emoji-font.conf /app/etc/fonts/local.conf",
+                "fc-cache -fv"
+            ]
+        },
+        {
             "name": "xprop",
             "sources": [
                 {
