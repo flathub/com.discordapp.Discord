@@ -27,12 +27,33 @@
     ],
     "modules": [
         {
+            "name": "twemoji-fonts",
+            "buildsystem": "simple",
+            "sources": [
+                {
+                    "type": "file",
+                    "path": "emoji-font.conf"
+                },
+                {
+                    "type": "file",
+                    "path": "Twemoji.ttf"
+                }
+            ],
+            "build-commands": [
+                "mkdir -p /app/share/fonts/",
+                "cp Twemoji.ttf /app/share/fonts/",
+                "mkdir -p /app/etc/fonts/",
+                "cp emoji-font.conf /app/etc/fonts/local.conf",
+                "fc-cache -fv"
+            ]
+        },
+        {
             "name": "xprop",
             "sources": [
                 {
-                "type": "archive",
-                "url": "https://xorg.freedesktop.org/archive/individual/app/xprop-1.2.4.tar.bz2",
-                "sha256": "8c77fb096e46c60032b7e2bde9492c3ffcc18734f50b395085a5f10bfd3cf753"
+                    "type": "archive",
+                    "url": "https://xorg.freedesktop.org/archive/individual/app/xprop-1.2.4.tar.bz2",
+                    "sha256": "8c77fb096e46c60032b7e2bde9492c3ffcc18734f50b395085a5f10bfd3cf753"
                 }
             ]
         },
@@ -40,7 +61,7 @@
             "name": "python3-XLib",
             "buildsystem": "simple",
             "build-commands": [
-              "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} XLib"
+                "pip3 install --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} XLib"
             ],
             "sources": [
                 {
@@ -163,5 +184,3 @@
         }
     ]
 }
-
-
