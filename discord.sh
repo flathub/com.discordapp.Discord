@@ -6,5 +6,5 @@ socat $SOCAT_ARGS \
     &
 socat_pid=$!
 set-gtk-dark-theme.py &
-env TMPDIR=$XDG_CACHE_HOME zypak-wrapper /app/discord/Discord "$@"
+env TMPDIR=$XDG_CACHE_HOME CHROME_WRAPPER=$(readlink -f "$0") ZYPAK_FORCE_FILE_PORTAL=1 zypak-wrapper.sh /app/discord/Discord "$@"
 kill -SIGTERM $socat_pid
