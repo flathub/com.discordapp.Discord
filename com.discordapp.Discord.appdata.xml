@@ -20,6 +20,8 @@
       <li>Available on Linux, macOS, Windows, iOS, Android, and your web browser.</li>
     </ul>
     <p>Discord is written in Javascript, React, Elixir, and Rust. The desktop application uses the electron framework.</p>
+    <p>The flatpak version runs in a sandbox to provide better safety and privacy for users. However, this sandboxing prevents the following features from working out of the box: Game Activity, Unrestricted File Access, Rich Presence. Check the README in the Github repo for details.</p>
+    <p>This wrapper is not verified by, affiliated with, or supported by Discord Inc.</p>
   </description>
   <screenshots>
     <screenshot type="default">
