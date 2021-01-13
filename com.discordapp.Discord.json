@@ -17,6 +17,9 @@
         "--share=network",
         "--device=all",
         "--talk-name=org.freedesktop.Notifications",
+        "--filesystem=xdg-videos:ro",
+        "--filesystem=xdg-pictures:ro",
+        "--filesystem=xdg-download",
         "--talk-name=org.freedesktop.portal.Fcitx",
         "--talk-name=org.kde.StatusNotifierWatcher",
         "--talk-name=com.canonical.AppMenu.Registrar",
@@ -179,17 +182,7 @@
                             "sha256": "3f1e01a4af181c5d1b32b2986089282dc6a789d2aa4c3ac67070b27979195b72"
                         }
                     ]
-                },
-		{
-		    "name": "zypak",
-		    "sources": [
-			{
-			    "type": "git",
-			    "url": "https://github.com/refi64/zypak",
-			    "commit": "3f8407fd481034f142b3f182e85a78989bc02ce1"
-			}
-		    ]
-		}
+                }
             ]
         }
     ]
