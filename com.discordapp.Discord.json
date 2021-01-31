@@ -11,24 +11,24 @@
         "proprietary"
     ],
     "finish-args": [
-        "--share=ipc",
-        "--socket=x11",
-        "--socket=pulseaudio",
-        "--share=network",
-        "--device=all",
-        "--talk-name=org.freedesktop.Notifications",
-        // Giving home and xdg-downloads for accessing and saving
-        "--filesystem=home:ro",
-        "--filesystem=xdg-downloads:rw",
-        // I hate this blacklist but guess I'll do it
-        "--nofilesystem=xdg-config",
-        "--nofilesystem=xdg-cache",
-        "--nofilesystem=xdg-data",
-        "--nofilesystem=~/.var",
-        "--nofilesystem=~/.bashrc",
+	"--share=ipc",
+	"--socket=x11",
+	"--socket=pulseaudio",
+	"--share=network",
+	"--device=all",
+	"--talk-name=org.freedesktop.Notifications",
+	// Giving home and xdg-downloads for accessing and saving
+	"--filesystem=home:ro",
+	"--filesystem=xdg-downloads:rw",
+	// I hate this blacklist but guess I'll do it
+	"--nofilesystem=xdg-config",
+	"--nofilesystem=xdg-cache",
+	"--nofilesystem=xdg-data",
+	"--nofilesystem=~/.var",
+	"--nofilesystem=~/.bashrc",
 	"--nofilesystem=~/.bash_aliases",
-        "--nofilesystem=~/.bash_login",
-        "--nofilesystem=~/.bash_logout",
+	"--nofilesystem=~/.bash_login",
+	"--nofilesystem=~/.bash_logout",
 	"--nofilesystem=~/.bash_profile",
 	"--nofilesystem=~/.zfunc",
 	"--nofilesystem=~/.zlogin",
@@ -55,12 +55,12 @@
 	"--nofilesystem=~/.pki",
 	"--nofilesystem=~/.smbcredentials",
 	"--nofilesystem=~/.vaults",
-        "--talk-name=org.freedesktop.portal.Fcitx",
-        "--talk-name=org.kde.StatusNotifierWatcher",
-        "--talk-name=com.canonical.AppMenu.Registrar",
-        "--talk-name=com.canonical.indicator.application",
-        "--talk-name=com.canonical.Unity.LauncherEntry",
-        "--env=XDG_CURRENT_DESKTOP=ubuntu:GNOME"
+	"--talk-name=org.freedesktop.portal.Fcitx",
+	"--talk-name=org.kde.StatusNotifierWatcher",
+	"--talk-name=com.canonical.AppMenu.Registrar",
+	"--talk-name=com.canonical.indicator.application",
+	"--talk-name=com.canonical.Unity.LauncherEntry",
+	"--env=XDG_CURRENT_DESKTOP=ubuntu:GNOME"
     ],
     "modules": [
         {
