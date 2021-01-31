@@ -18,7 +18,7 @@
 	"--device=all",
 	"--talk-name=org.freedesktop.Notifications",
 	"--filesystem=home:ro",
-	"--filesystem=xdg-downloads:rw",
+	"--filesystem=xdg-download:rw",
 	"--nofilesystem=xdg-config",
 	"--nofilesystem=xdg-cache",
 	"--nofilesystem=xdg-data",
