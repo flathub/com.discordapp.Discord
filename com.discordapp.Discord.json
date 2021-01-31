@@ -17,10 +17,8 @@
 	"--share=network",
 	"--device=all",
 	"--talk-name=org.freedesktop.Notifications",
-	// Giving home and xdg-downloads for accessing and saving
 	"--filesystem=home:ro",
 	"--filesystem=xdg-downloads:rw",
-	// I hate this blacklist but guess I'll do it
 	"--nofilesystem=xdg-config",
 	"--nofilesystem=xdg-cache",
 	"--nofilesystem=xdg-data",
