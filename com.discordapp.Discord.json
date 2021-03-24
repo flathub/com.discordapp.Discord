@@ -96,8 +96,7 @@
                         "type": "rotating-url",
                         "url": "https://discord.com/api/download?platform=linux&format=tar.gz",
                         "pattern": "https://dl.discordapp.net/apps/linux/([0-9.]+)/discord-([0-9.]+).tar.gz"
-                    },
-                    "size": 70923809
+                    }
                 },
                 {
                     "type": "file",
