@@ -90,8 +90,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://dl.discordapp.net/apps/linux/0.0.13/discord-0.0.13.tar.gz",
-                    "sha256": "feeca83531607eec1a6231ad8eab88bbf1865c39cf5f82b884e3b5241733bf34",
+                    "url": "https://dl.discordapp.net/apps/linux/0.0.14/discord-0.0.14.tar.gz",
+                    "sha256": "c2651aef4b2c078a3d0975b82fd391571decaa636e52343bb4f116da1c4804e7",
                     "strip-components": 0,
                     "x-checker-data": {
                         "type": "rotating-url",
