@@ -14,18 +14,25 @@ import json
 import os
 from pathlib import Path
 
-XDG_CONFIG_HOME = os.environ.get("XDG_CONFIG_HOME")
-if Path(f"{XDG_CONFIG_HOME}/discord/settings.json").is_file():
-    with open(f"{XDG_CONFIG_HOME}/discord/settings.json", "r+") as settings_file:
+XDG_CONFIG_HOME = os.environ.get("XDG_CONFIG_HOME") or os.path.join(
+    os.path.expanduser("~"), ".config"
+)
+
+settings_path = Path(f"{XDG_CONFIG_HOME}/discord/settings.json")
+settings_path_temp = Path(f"{XDG_CONFIG_HOME}/discord/settings.json.tmp")
+if settings_path.is_file():
+    with settings_path.open() as settings_file:
         settings = json.load(settings_file)
         if settings.get("SKIP_HOST_UPDATE"):
             print("Disabling updates already done")
         else:
-            skip_host_update = {"SKIP_HOST_UPDATE":True}
-            settings.update(skip_host_update)
-            settings_file.seek(0)
-            json.dump(settings, settings_file, indent = 2)
-            print("Disabled updates")
+            with settings_path_temp.open('w') as settings_file_temp:
+                skip_host_update = {"SKIP_HOST_UPDATE":True}
+                settings.update(skip_host_update)
+                settings_file.seek(0)
+                json.dump(settings, settings_file_temp, indent = 2)
+                settings_path_temp.rename(settings_path)
+                print("Disabled updates")
             
 else:
     print("settings.json doesn't yet exist, can't disable it yet")
