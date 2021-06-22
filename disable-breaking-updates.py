@@ -20,7 +20,7 @@ XDG_CONFIG_HOME = os.environ.get("XDG_CONFIG_HOME") or os.path.join(
 
 settings_path = Path(f"{XDG_CONFIG_HOME}/discord/settings.json")
 settings_path_temp = Path(f"{XDG_CONFIG_HOME}/discord/settings.json.tmp")
-if settings_path.is_file():
+try:
     with settings_path.open() as settings_file:
         settings = json.load(settings_file)
         if settings.get("SKIP_HOST_UPDATE"):
@@ -34,5 +34,5 @@ if settings_path.is_file():
                 settings_path_temp.rename(settings_path)
                 print("Disabled updates")
             
-else:
+except IOError:
     print("settings.json doesn't yet exist, can't disable it yet")
