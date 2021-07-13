@@ -58,7 +58,7 @@
                     "sha256": "9b92ed0316bf2486121d8bac88bd1878f16b43bd335f18009b1f941f1eca93a1",
                     "x-checker-data": {
                         "type": "anitya",
-                        "project-id": "14958",
+                        "project-id": 14958,
                         "url-template": "https://xorg.freedesktop.org/archive/individual/app/xprop-$version.tar.bz2"
                     }
                 }
@@ -163,7 +163,7 @@
                             "sha256": "ea768aa0187ba349391c6c157445ecc2b42e7d671fc1ce8c53ff5ef513f1e2ab",
                             "x-checker-data": {
                                 "type": "anitya",
-                                "project-id": "2605",
+                                "project-id": 2605,
                                 "url-template": "https://github.com/pciutils/pciutils/archive/v$version.tar.gz"
                             }
                         }
@@ -178,7 +178,7 @@
                             "sha256": "0c7e635070af1b9037fd96869fc45eacf9845cb54547681de9d885044538736d",
                             "x-checker-data": {
                                 "type": "anitya",
-                                "project-id": "4848",
+                                "project-id": 4848,
                                 "url-template": "http://www.dest-unreach.org/socat/download/socat-$version.tar.gz"
                             }
                         }
