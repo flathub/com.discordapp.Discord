@@ -71,8 +71,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://files.pythonhosted.org/packages/57/38/930b1241372a9f266a7df2b184fb9d4f497c2cef2e016b014f82f541fe7c/setuptools_scm-6.0.1.tar.gz",
-                    "sha256": "d1925a69cb07e9b29416a275b9fadb009a23c148ace905b2fb220649a6c18e92",
+                    "url": "https://files.pythonhosted.org/packages/01/34/920c7363e98de4d37bee72c88025aaabc61a8d8c81128974b9eb239f0102/setuptools_scm-6.1.0.tar.gz",
+                    "sha256": "0e9fc7ca3f15657941d352ee2be5901d1606294577213e0f4c26cef20978e819",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "setuptools_scm"
