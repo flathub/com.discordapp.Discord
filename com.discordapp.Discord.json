@@ -1,9 +1,9 @@
 {
     "app-id": "com.discordapp.Discord",
     "base": "org.electronjs.Electron2.BaseApp",
-    "base-version": "20.08",
+    "base-version": "21.08",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "20.08",
+    "runtime-version": "21.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "discord",
     "separate-locales": false,
@@ -115,8 +115,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://dl.discordapp.net/apps/linux/0.0.15/discord-0.0.15.tar.gz",
-                    "sha256": "adede954e9c696d96e254759b539527a24ab1d42f0d548c5c4309d1a3fc3c25e",
+                    "url": "https://dl.discordapp.net/apps/linux/0.0.16/discord-0.0.16.tar.gz",
+                    "sha256": "51354a8ecfe2ec2fe6f35e356d706c6a441115dfdcfff126aaa84a864af538e9",
                     "strip-components": 0,
                     "x-checker-data": {
                         "type": "rotating-url",
