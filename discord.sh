@@ -7,5 +7,5 @@ socat $SOCAT_ARGS \
 socat_pid=$!
 disable-breaking-updates.py
 set-gtk-dark-theme.py &
-env TMPDIR=$XDG_CACHE_HOME zypak-wrapper /app/discord/Discord "$@"
+env TMPDIR=$XDG_CACHE_HOME zypak-wrapper /app/discord/Discord --enable-gpu-rasterization --enable-zero-copy "$@"
 kill -SIGTERM $socat_pid
