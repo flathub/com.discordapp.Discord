@@ -71,8 +71,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://files.pythonhosted.org/packages/57/38/930b1241372a9f266a7df2b184fb9d4f497c2cef2e016b014f82f541fe7c/setuptools_scm-6.0.1.tar.gz",
-                    "sha256": "d1925a69cb07e9b29416a275b9fadb009a23c148ace905b2fb220649a6c18e92",
+                    "url": "https://files.pythonhosted.org/packages/4a/18/477d3d9eb2f88230ff2a41de9d8ffa3554b706352787d289f57f76bfba0b/setuptools_scm-6.4.2.tar.gz",
+                    "sha256": "6833ac65c6ed9711a4d5d2266f8024cfa07c533a0e55f4c12f6eff280a5a9e30",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "setuptools_scm"
@@ -172,8 +172,8 @@
                     "sources": [
                         {
                             "type": "archive",
-                            "url": "http://www.dest-unreach.org/socat/download/socat-1.7.4.1.tar.gz",
-                            "sha256": "0c7e635070af1b9037fd96869fc45eacf9845cb54547681de9d885044538736d",
+                            "url": "http://www.dest-unreach.org/socat/download/socat-1.7.4.3.tar.gz",
+                            "sha256": "d697245144731423ddbbceacabbd29447089ea223e9a439b28f9ff90d0dd216e",
                             "x-checker-data": {
                                 "type": "anitya",
                                 "project-id": 4848,
