@@ -54,6 +54,7 @@
     <category>Network</category>
   </categories>
   <releases>
+    <release version="0.0.19" date="2022-08-08"/>
     <release version="0.0.18" date="2022-06-08"/>
     <release version="0.0.17" date="2022-02-17"/>
     <release version="0.0.16" date="2021-09-22"/>

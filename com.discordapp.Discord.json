@@ -111,8 +111,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://dl.discordapp.net/apps/linux/0.0.18/discord-0.0.18.tar.gz",
-                    "sha256": "0417389fa437c6e044d77252de0cffe8473074e596e7b34ba76b1a3a5c0e80c2",
+                    "url": "https://dl.discordapp.net/apps/linux/0.0.19/discord-0.0.19.tar.gz",
+                    "sha256": "19f4b275d6c617c580e89987a38b54336edcc87579911032ac48997b58db0390",
                     "strip-components": 0,
                     "x-checker-data": {
                         "type": "rotating-url",
@@ -153,8 +153,8 @@
                     "sources": [
                         {
                             "type": "archive",
-                            "url": "https://github.com/pciutils/pciutils/archive/v3.7.0.tar.gz",
-                            "sha256": "ea768aa0187ba349391c6c157445ecc2b42e7d671fc1ce8c53ff5ef513f1e2ab",
+                            "url": "https://github.com/pciutils/pciutils/archive/v3.8.0.tar.gz",
+                            "sha256": "71189a1297e39d2638dd5691a102d2aecd7db8083e6de376c115e8996eeda027",
                             "x-checker-data": {
                                 "type": "anitya",
                                 "project-id": 2605,
