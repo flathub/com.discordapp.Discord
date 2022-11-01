@@ -85,8 +85,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://files.pythonhosted.org/packages/40/9c/107e22f637d33434404c07d69112b9d26b76ee0dd4dd705131ab6cdcc818/python-xlib-0.31.tar.gz",
-                    "sha256": "74d83a081f532bc07f6d7afcd6416ec38403d68f68b9b9dc9e1f28fbf2d799e9",
+                    "url": "https://files.pythonhosted.org/packages/4d/cf/a29ecb43a5c84a65ffd726e3b28806f56b3bc5e796ddb533ff52af107dcf/python-xlib-0.32.tar.gz",
+                    "sha256": "20e1382f8a98d8ed0facfa45415c46fd0c8eeb6f9996e58c22d3382a4ed6e37b",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "python-xlib"
@@ -168,8 +168,8 @@
                     "sources": [
                         {
                             "type": "archive",
-                            "url": "http://www.dest-unreach.org/socat/download/socat-1.7.4.3.tar.gz",
-                            "sha256": "d697245144731423ddbbceacabbd29447089ea223e9a439b28f9ff90d0dd216e",
+                            "url": "http://www.dest-unreach.org/socat/download/socat-1.7.4.4.tar.gz",
+                            "sha256": "0f8f4b9d5c60b8c53d17b60d79ababc4a0f51b3bb6d2bd3ae8a6a4b9d68f195e",
                             "x-checker-data": {
                                 "type": "anitya",
                                 "project-id": 4848,
