@@ -10,7 +10,7 @@ FEATURES="UseSkiaRenderer"
 
 if [[ $XDG_SESSION_TYPE == "wayland" ]]
 then
-    FEATURES="$FEATURES,WebRTCPipeWireCapturer,WaylandWindowDecorations"
+    FEATURES="$FEATURES,WaylandWindowDecorations"
 fi
 
 FLAGS="--ozone-platform-hint=auto \
