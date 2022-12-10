@@ -52,12 +52,12 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://xorg.freedesktop.org/archive/individual/app/xprop-1.2.5.tar.bz2",
-                    "sha256": "9b92ed0316bf2486121d8bac88bd1878f16b43bd335f18009b1f941f1eca93a1",
+                    "url": "https://xorg.freedesktop.org/archive/individual/app/xprop-1.2.6.tar.xz",
+                    "sha256": "580b8525b12ecc0144aa16c88b0aafa76d2e799b44c8c6c50f9ce92788b5586e",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 14958,
-                        "url-template": "https://xorg.freedesktop.org/archive/individual/app/xprop-$version.tar.bz2"
+                        "url-template": "https://xorg.freedesktop.org/archive/individual/app/xprop-$version.tar.xz"
                     }
                 }
             ]
