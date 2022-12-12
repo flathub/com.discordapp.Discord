@@ -85,8 +85,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://files.pythonhosted.org/packages/4d/cf/a29ecb43a5c84a65ffd726e3b28806f56b3bc5e796ddb533ff52af107dcf/python-xlib-0.32.tar.gz",
-                    "sha256": "20e1382f8a98d8ed0facfa45415c46fd0c8eeb6f9996e58c22d3382a4ed6e37b",
+                    "url": "https://files.pythonhosted.org/packages/40/9c/107e22f637d33434404c07d69112b9d26b76ee0dd4dd705131ab6cdcc818/python-xlib-0.31.tar.gz",
+                    "sha256": "74d83a081f532bc07f6d7afcd6416ec38403d68f68b9b9dc9e1f28fbf2d799e9",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "python-xlib"
