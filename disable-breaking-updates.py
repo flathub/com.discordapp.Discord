@@ -24,7 +24,7 @@ try:
     with settings_path.open() as settings_file:
         settings = json.load(settings_file)
 except IOError:
-    settings_path.parent.mkdir(parents = True, exist_ok = True)
+    settings_path.parent.mkdir(parents=True, exist_ok=True)
     settings = {}
 
 if settings.get("SKIP_HOST_UPDATE"):
