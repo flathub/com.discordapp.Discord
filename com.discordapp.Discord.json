@@ -111,8 +111,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://dl.discordapp.net/apps/linux/0.0.23/discord-0.0.23.tar.gz",
-                    "sha256": "288c005901f2bf5a1148021e1d22fd297419d43c70b0f989820ab72aa79faa44",
+                    "url": "https://dl.discordapp.net/apps/linux/0.0.24/discord-0.0.24.tar.gz",
+                    "sha256": "486fb7e1fb74993aad83dac5888eb437a24838dcaa17c73c4a59d1727e5ae177",
                     "strip-components": 0,
                     "x-checker-data": {
                         "type": "rotating-url",
