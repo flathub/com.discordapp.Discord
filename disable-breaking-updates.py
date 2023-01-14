@@ -34,7 +34,7 @@ else:
     settings.update(skip_host_update)
 
     with settings_path_temp.open('w') as settings_file_temp:
-        json.dump(settings, settings_file_temp, indent = 2)
+        json.dump(settings, settings_file_temp, indent=2)
 
     settings_path_temp.rename(settings_path)
     print("Disabled updates")
