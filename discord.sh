@@ -14,6 +14,5 @@ then
 fi
 
 disable-breaking-updates.py
-set-gtk-dark-theme.py &
 env TMPDIR=$XDG_CACHE_HOME zypak-wrapper /app/discord/Discord $FLAGS "$@"
 kill -SIGTERM $socat_pid
