@@ -23,7 +23,8 @@
         "--talk-name=org.kde.StatusNotifierWatcher",
         "--talk-name=com.canonical.AppMenu.Registrar",
         "--talk-name=com.canonical.indicator.application",
-        "--talk-name=com.canonical.Unity.LauncherEntry"
+        "--talk-name=com.canonical.Unity.LauncherEntry",
+        "--own-name=org.kde.*"
     ],
     "modules": [
         {
