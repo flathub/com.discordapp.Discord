@@ -24,6 +24,16 @@ However, this sandboxing prevents the following features from working:
 - **Rich Presence**: See [this page](https://github.com/flathub/com.discordapp.Discord/wiki/Rich-Precense-(discord-rpc)) if you want to expose Discord's rich presence interface for other applications.
 
 
+### Wayland
+
+This package enables the flags to run on Wayland, however it is opt-in. To opt-in run:
+
+```sh
+flatpak override --user --socket=wayland com.discordapp.Discord
+```
+
+To opt-out do the same with `--nosocket=wayland`.
+
 ## Legal
 
 The Discord app itself is **proprietary** (closed source).
