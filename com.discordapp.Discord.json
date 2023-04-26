@@ -23,7 +23,8 @@
         "--talk-name=org.kde.StatusNotifierWatcher",
         "--talk-name=com.canonical.AppMenu.Registrar",
         "--talk-name=com.canonical.indicator.application",
-        "--talk-name=com.canonical.Unity.LauncherEntry"
+        "--talk-name=com.canonical.Unity.LauncherEntry",
+        "--own-name=org.kde.*"
     ],
     "modules": [
         {
@@ -85,8 +86,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://files.pythonhosted.org/packages/40/9c/107e22f637d33434404c07d69112b9d26b76ee0dd4dd705131ab6cdcc818/python-xlib-0.31.tar.gz",
-                    "sha256": "74d83a081f532bc07f6d7afcd6416ec38403d68f68b9b9dc9e1f28fbf2d799e9",
+                    "url": "https://files.pythonhosted.org/packages/86/f5/8c0653e5bb54e0cbdfe27bf32d41f27bc4e12faa8742778c17f2a71be2c0/python-xlib-0.33.tar.gz",
+                    "sha256": "55af7906a2c75ce6cb280a584776080602444f75815a7aff4d287bb2d7018b32",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "python-xlib"
@@ -111,8 +112,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://dl.discordapp.net/apps/linux/0.0.22/discord-0.0.22.tar.gz",
-                    "sha256": "175c73771e049ba45e7fb1d37bd107ef0871e3d8857340c5a5a40a745aaeaba7",
+                    "url": "https://dl.discordapp.net/apps/linux/0.0.26/discord-0.0.26.tar.gz",
+                    "sha256": "30f74dc59241988378346128616bcbd9c98d9b7eff613dbbe66d9b5561d76f06",
                     "strip-components": 0,
                     "x-checker-data": {
                         "type": "rotating-url",
