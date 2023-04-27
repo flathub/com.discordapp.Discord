@@ -24,7 +24,8 @@
         "--talk-name=com.canonical.AppMenu.Registrar",
         "--talk-name=com.canonical.indicator.application",
         "--talk-name=com.canonical.Unity.LauncherEntry",
-        "--own-name=org.kde.*"
+        "--own-name=org.kde.*",
+        "--env=XCURSOR_PATH=/run/host/user-share/icons:/run/host/share/icons"
     ],
     "modules": [
         {
