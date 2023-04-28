@@ -8,7 +8,9 @@ socat_pid=$!
 
 FLAGS='--enable-gpu-rasterization --enable-zero-copy --enable-gpu-compositing --enable-native-gpu-memory-buffers --enable-oop-rasterization --enable-features=UseSkiaRenderer,WaylandWindowDecorations'
 
-if [[ -e "$XDG_RUNTIME_DIR/wayland-0" ]]
+WAYLAND_SOCKET=${WAYLAND_DISPLAY:-"wayland-0"}
+
+if [[ -e "$XDG_RUNTIME_DIR/${WAYLAND_SOCKET}" ]]
 then
     FLAGS="$FLAGS --ozone-platform-hint=auto"
 fi
