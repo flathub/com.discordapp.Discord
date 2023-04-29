@@ -15,11 +15,6 @@ then
     FLAGS="$FLAGS --ozone-platform-hint=auto"
 fi
 
-if [[ $XDG_SESSION_TYPE == "wayland" ]] && [ -c /dev/nvidia0 ]
-then
-    FLAGS="$FLAGS --disable-gpu-sandbox"
-fi
-
 disable-breaking-updates.py
 set-gtk-dark-theme.py &
 env TMPDIR=$XDG_CACHE_HOME zypak-wrapper /app/discord/Discord $FLAGS "$@"
