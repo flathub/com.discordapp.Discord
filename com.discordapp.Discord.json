@@ -51,58 +51,10 @@
             ]
         },
         {
-            "name": "xprop",
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://xorg.freedesktop.org/archive/individual/app/xprop-1.2.6.tar.xz",
-                    "sha256": "580b8525b12ecc0144aa16c88b0aafa76d2e799b44c8c6c50f9ce92788b5586e",
-                    "x-checker-data": {
-                        "type": "anitya",
-                        "project-id": 14958,
-                        "url-template": "https://xorg.freedesktop.org/archive/individual/app/xprop-$version.tar.xz"
-                    }
-                }
-            ]
-        },
-        {
-            "name": "python-setuptools_scm",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --no-deps --no-build-isolation --verbose --prefix=${FLATPAK_DEST} ."
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://files.pythonhosted.org/packages/57/38/930b1241372a9f266a7df2b184fb9d4f497c2cef2e016b014f82f541fe7c/setuptools_scm-6.0.1.tar.gz",
-                    "sha256": "d1925a69cb07e9b29416a275b9fadb009a23c148ace905b2fb220649a6c18e92"
-                }
-            ]
-        },
-        {
-            "name": "python-xlib",
-            "buildsystem": "simple",
-            "build-commands": [
-                "pip3 install --no-deps --no-build-isolation --verbose --prefix=${FLATPAK_DEST} ."
-            ],
-            "sources": [
-                {
-                    "type": "archive",
-                    "url": "https://files.pythonhosted.org/packages/86/f5/8c0653e5bb54e0cbdfe27bf32d41f27bc4e12faa8742778c17f2a71be2c0/python-xlib-0.33.tar.gz",
-                    "sha256": "55af7906a2c75ce6cb280a584776080602444f75815a7aff4d287bb2d7018b32",
-                    "x-checker-data": {
-                        "type": "pypi",
-                        "name": "python-xlib"
-                    }
-                }
-            ]
-        },
-        {
             "name": "discord",
             "buildsystem": "simple",
             "build-commands": [
                 "install -Dm755 discord.sh /app/bin/discord",
-                "install -Dm755 set-gtk-dark-theme.py /app/bin",
                 "install -Dm755 disable-breaking-updates.py /app/bin",
                 "mv Discord /app/discord",
                 "chmod +x /app/discord/Discord",
@@ -130,10 +82,6 @@
                 {
                     "type": "file",
                     "path": "com.discordapp.Discord.appdata.xml"
-                },
-                {
-                    "type": "file",
-                    "path": "set-gtk-dark-theme.py"
                 },
                 {
                     "type": "file",
