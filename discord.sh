@@ -17,7 +17,7 @@ fi
 
 if [[ $XDG_SESSION_TYPE == "wayland" ]] && [ -c /dev/nvidia0 ]
 then
-    FLAGS="$FLAGS --disable-gpu-sandbox"
+    FLAGS="$FLAGS --use-gl=desktop"
 fi
 
 disable-breaking-updates.py
