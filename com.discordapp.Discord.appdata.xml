@@ -9,6 +9,7 @@
   <url type="homepage">https://discord.com</url>
   <icon type="remote" height="256" width="256">https://support.discord.com/hc/user_images/bbW4u80g7yIVxsphv9diNw.png</icon>
   <description>
+    <p>This wrapper is not verified by, affiliated with, or supported by Discord Inc.</p>
     <p>Discord is a free all in one messaging, voice, and video client thats available on your computer and phone.</p>
     <p>Whether you’re part of a school club, gaming group, worldwide art community, or just a handful of friends that want to spend time together, Discord makes it easy to talk every day and hang out more often.</p>
     <ul>
@@ -21,7 +22,6 @@
     </ul>
     <p>Discord is written in Javascript, React, Elixir, and Rust. The desktop application uses the electron framework.</p>
     <p>The flatpak version runs in a sandbox to provide better safety and privacy for users. However, this sandboxing prevents the following features from working out of the box: Game Activity, Unrestricted File Access, Rich Presence. Check the README in the Github repo for details.</p>
-    <p>This wrapper is not verified by, affiliated with, or supported by Discord Inc.</p>
   </description>
   <screenshots>
     <screenshot type="default">
