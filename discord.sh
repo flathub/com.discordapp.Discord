@@ -17,7 +17,7 @@ fi
 
 if [[ $XDG_SESSION_TYPE == "wayland" ]] && [ -c /dev/nvidia0 ]
 then
-    FLAGS="$FLAGS --use-gl=desktop"
+    FLAGS="$FLAGS --use-vulkan"
 fi
 
 disable-breaking-updates.py

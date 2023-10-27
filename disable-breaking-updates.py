@@ -23,7 +23,7 @@ settings_path_temp = Path(f"{XDG_CONFIG_HOME}/discord/settings.json.tmp")
 try:
     with settings_path.open() as settings_file:
         settings = json.load(settings_file)
-except IOError:
+except (IOError, json.decoder.JSONDecodeError):
     settings_path.parent.mkdir(parents=True, exist_ok=True)
     settings = {}
 

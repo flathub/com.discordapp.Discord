@@ -1,9 +1,9 @@
 {
     "app-id": "com.discordapp.Discord",
     "base": "org.electronjs.Electron2.BaseApp",
-    "base-version": "22.08",
+    "base-version": "23.08",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "22.08",
+    "runtime-version": "23.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "discord",
     "separate-locales": false,
@@ -16,7 +16,6 @@
         "--socket=pulseaudio",
         "--share=network",
         "--device=all",
-        "--talk-name=org.freedesktop.Notifications",
         "--talk-name=org.freedesktop.ScreenSaver",
         "--filesystem=xdg-videos:ro",
         "--filesystem=xdg-pictures:ro",
@@ -66,8 +65,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://dl.discordapp.net/apps/linux/0.0.28/discord-0.0.28.tar.gz",
-                    "sha256": "270c55566fd02012e857243615ffcc5f4e9436067e740b03f7ad06b0283533e5",
+                    "url": "https://dl.discordapp.net/apps/linux/0.0.32/discord-0.0.32.tar.gz",
+                    "sha256": "5de1832912a7bc3ca5d005a6f55b3f3c37887c0abf14bf40b232edf9d360d474",
                     "strip-components": 0,
                     "x-checker-data": {
                         "type": "rotating-url",
