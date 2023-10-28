@@ -37,5 +37,3 @@ To opt-out do the same with `--nosocket=wayland`.
 ## Legal
 
 The Discord app itself is **proprietary** (closed source).
-
-This wrapper is not verified by, affiliated with, or supported by Discord Inc.
