@@ -3,7 +3,7 @@
   <id type="desktop">com.discordapp.Discord.desktop</id>
   <name>Discord</name>
   <developer_name>Discord Inc.</developer_name>
-  <summary>Messaging, Voice, and Video Client</summary>
+  <summary>Messaging, voice and video client</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LicenseRef-proprietary</project_license>
   <url type="homepage">https://discord.com</url>
