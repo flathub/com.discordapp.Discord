@@ -6,18 +6,11 @@ socat $SOCAT_ARGS \
     &
 socat_pid=$!
 
-FLAGS='--enable-gpu-rasterization --enable-zero-copy --enable-gpu-compositing --enable-native-gpu-memory-buffers --enable-oop-rasterization --enable-features=UseSkiaRenderer,WaylandWindowDecorations'
-
 WAYLAND_SOCKET=${WAYLAND_DISPLAY:-"wayland-0"}
 
 if [[ -e "$XDG_RUNTIME_DIR/${WAYLAND_SOCKET}" ]]
 then
-    FLAGS="$FLAGS --ozone-platform-hint=auto"
-fi
-
-if [[ $XDG_SESSION_TYPE == "wayland" ]] && [ -c /dev/nvidia0 ]
-then
-    FLAGS="$FLAGS --use-vulkan"
+    FLAGS="--enable-features=WaylandWindowDecorations --ozone-platform-hint=auto"
 fi
 
 disable-breaking-updates.py
