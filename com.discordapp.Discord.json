@@ -28,7 +28,7 @@
         "--env=XCURSOR_PATH=/run/host/user-share/icons:/run/host/share/icons",
         /* Electron checks if it's running on Unity/KDE before using the UnityLauncherAPI. To make it work on other Desktops too, we need to pretend we are on KDE. */
         "--env=XDG_CURRENT_SESSION=KDE",
-        /* Make moving files to trash work */
+        /* Make moving files to trash work because it chooses which to use based on XDG_CURRENT_SESSION.  */
         "--env=ELECTRON_TRASH=gio"
     ],
     "modules": [
