@@ -23,9 +23,13 @@
         "--talk-name=org.kde.StatusNotifierWatcher",
         "--talk-name=com.canonical.AppMenu.Registrar",
         "--talk-name=com.canonical.indicator.application",
-        "--talk-name=com.canonical.Unity.LauncherEntry",
+        "--talk-name=com.canonical.Unity",
         "--own-name=org.kde.*",
-        "--env=XCURSOR_PATH=/run/host/user-share/icons:/run/host/share/icons"
+        "--env=XCURSOR_PATH=/run/host/user-share/icons:/run/host/share/icons",
+        /* Electron checks if it's running on Unity or KDE before using the UnityLauncherAPI. To make it work on other Desktops too, we need to pretend we are on KDE. */
+        "--env=XDG_CURRENT_SESSION=KDE",
+        /* Make moving files to trash work because it chooses which to use based on XDG_CURRENT_SESSION.  */
+        "--env=ELECTRON_TRASH=gio"
     ],
     "modules": [
         {
@@ -60,7 +64,8 @@
                 "install -d /app/share/applications",
                 "sed -e 's/Icon=discord/Icon=com.discordapp.Discord/' -e 's|Exec=/usr/share/discord/Discord|Exec=com.discordapp.Discord|' /app/discord/discord.desktop > /app/share/applications/${FLATPAK_ID}.desktop",
                 "install -Dm644 /app/discord/discord.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png",
-                "install -Dm644 com.discordapp.Discord.appdata.xml /app/share/appdata/com.discordapp.Discord.appdata.xml"
+                "install -Dm644 com.discordapp.Discord.appdata.xml /app/share/appdata/com.discordapp.Discord.appdata.xml",
+                "patch-desktop-filename ${FLATPAK_DEST}/discord/resources/app.asar"
             ],
             "sources": [
                 {
