@@ -26,9 +26,7 @@
         "--talk-name=com.canonical.Unity",
         "--own-name=org.kde.*",
         "--env=XCURSOR_PATH=/run/host/user-share/icons:/run/host/share/icons",
-        /* Electron checks if it's running on Unity or KDE before using the UnityLauncherAPI. To make it work on other Desktops too, we need to pretend we are on KDE. */
         "--env=XDG_CURRENT_SESSION=KDE",
-        /* Make moving files to trash work because it chooses which to use based on XDG_CURRENT_SESSION.  */
         "--env=ELECTRON_TRASH=gio"
     ],
     "modules": [
@@ -70,8 +68,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://dl.discordapp.net/apps/linux/0.0.42/discord-0.0.42.tar.gz",
-                    "sha256": "edc6a7d7926105ce8e240599324f2e11db7f0f5a2b08a1b530dd5605d4d9ac8d",
+                    "url": "https://dl.discordapp.net/apps/linux/0.0.43/discord-0.0.43.tar.gz",
+                    "sha256": "0cef1b4b996e48a84a5bab09661cf8c557883dec50568683e3162e80708ddee9",
                     "strip-components": 0,
                     "x-checker-data": {
                         "type": "rotating-url",
