@@ -6,7 +6,7 @@ socat $SOCAT_ARGS \
     &
 socat_pid=$!
 
-if [[ -e "$XDG_RUNTIME_DIR/${WAYLAND_DISPLAY:-'wayland-0'}" || -e "${WAYLAND_SOCKET}" ]]
+if [[ -e "$XDG_RUNTIME_DIR/${WAYLAND_SOCKET:-'wayland-0'}" || -e "${WAYLAND_DISPLAY}" ]]
 then
     FLAGS="--enable-features=WaylandWindowDecorations --ozone-platform-hint=auto"
 fi
