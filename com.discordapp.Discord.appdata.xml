@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>com.discordapp.Discord.desktop</id>
+  <id>com.discordapp.Discord</id>
   <name>Discord</name>
   <developer_name>Discord Inc.</developer_name>
   <summary>Messaging, voice and video client</summary>
@@ -52,6 +52,12 @@
     <category>InstantMessaging</category>
     <category>Network</category>
   </categories>
+  <replaces>
+    <id>com.discordapp.Discord.desktop</id>
+  </replaces>
+  <provides>
+    <id>com.discordapp.Discord.desktop</id>
+  </provides>
   <releases>
     <release version="0.0.47" date="2024-03-25"/>
     <release version="0.0.46" date="2024-03-18"/>
