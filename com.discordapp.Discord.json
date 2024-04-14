@@ -61,7 +61,7 @@
                 "chmod +x /app/discord/Discord",
                 "install -d /app/share/applications",
                 "install -Dm644 /app/discord/discord.desktop /app/share/applications/${FLATPAK_ID}.desktop",
-                "desktop-file-edit --set-key=Icon --set-value=com.discordapp.Discord --set-key=Exec --set-value=com.discordapp.Discord /app/share/applications/${FLATPAK_ID}.desktop",
+                "desktop-file-edit --set-key=Icon --set-value=com.discordapp.Discord --set-key=Exec --set-value=com.discordapp.Discord --add-mime-type=x-scheme-handler/discord /app/share/applications/${FLATPAK_ID}.desktop",
                 "install -Dm644 /app/discord/discord.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png",
                 "install -Dm644 com.discordapp.Discord.appdata.xml /app/share/appdata/com.discordapp.Discord.appdata.xml",
                 "patch-desktop-filename ${FLATPAK_DEST}/discord/resources/app.asar"
