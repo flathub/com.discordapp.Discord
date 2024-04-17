@@ -60,7 +60,8 @@
                 "mv Discord /app/discord",
                 "chmod +x /app/discord/Discord",
                 "install -d /app/share/applications",
-                "sed -e 's/Icon=discord/Icon=com.discordapp.Discord/' -e 's|Exec=/usr/share/discord/Discord|Exec=com.discordapp.Discord|' /app/discord/discord.desktop > /app/share/applications/${FLATPAK_ID}.desktop",
+                "install -Dm644 /app/discord/discord.desktop /app/share/applications/${FLATPAK_ID}.desktop",
+                "desktop-file-edit --set-key=Icon --set-value=com.discordapp.Discord --set-key=Exec --set-value=com.discordapp.Discord --add-mime-type=x-scheme-handler/discord /app/share/applications/${FLATPAK_ID}.desktop",
                 "install -Dm644 /app/discord/discord.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png",
                 "install -Dm644 com.discordapp.Discord.appdata.xml /app/share/appdata/com.discordapp.Discord.appdata.xml",
                 "patch-desktop-filename ${FLATPAK_DEST}/discord/resources/app.asar"
@@ -68,8 +69,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://dl.discordapp.net/apps/linux/0.0.49/discord-0.0.49.tar.gz",
-                    "sha256": "ad54980244d94e5bab9db51e60914282c3dcb02aa32756c99de4108b2866bf04",
+                    "url": "https://dl.discordapp.net/apps/linux/0.0.50/discord-0.0.50.tar.gz",
+                    "sha256": "e955dd54b93b67c34640c89276005177c348b9e524b6421de815d828d0016fee",
                     "strip-components": 0,
                     "x-checker-data": {
                         "type": "rotating-url",
