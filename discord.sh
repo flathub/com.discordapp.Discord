@@ -14,5 +14,5 @@ then
 fi
 
 disable-breaking-updates.py
-env TMPDIR=$XDG_CACHE_HOME zypak-wrapper /app/discord/Discord $FLAGS "$@"
+env TMPDIR=$XDG_CACHE_HOME zypak-wrapper /app/discord/Discord --enable-speech-dispatcher $FLAGS "$@"
 kill -SIGTERM $socat_pid
