@@ -70,8 +70,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://dl.discordapp.net/apps/linux/0.0.63/discord-0.0.63.tar.gz",
-                    "sha256": "2ad557f4424f626cc341dd9b795fdd0d6f238cb0e369c2990eb0fbda42d4c0aa",
+                    "url": "https://dl.discordapp.net/apps/linux/0.0.64/discord-0.0.64.tar.gz",
+                    "sha256": "b41a29ca11913439ad3964b0c223673c9266f36b24decefa714ba7edeac745b3",
                     "strip-components": 0,
                     "x-checker-data": {
                         "type": "rotating-url",
