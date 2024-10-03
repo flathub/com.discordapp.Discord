@@ -34,6 +34,18 @@ flatpak override --user --socket=wayland com.discordapp.Discord
 
 To opt-out do the same with `--nosocket=wayland`.
 
+### Persistent launch options
+
+To make Discord's launch options persistent, add them to `~/.var/app/com.discordapp.Discord/config/discord-flags.conf` (one option per line):
+
+```conf
+# This line will be ignored
+--enable-features=WaylandWindowDecorations
+
+# https://chromium.googlesource.com/chromium/src/+/master/docs/linux/password_storage.md
+--password-store=basic
+```
+
 ## Legal
 
 The Discord app itself is **proprietary** (closed source).
