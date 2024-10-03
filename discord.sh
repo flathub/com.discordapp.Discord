@@ -1,8 +1,13 @@
 #!/bin/bash
 FLATPAK_ID=${FLATPAK_ID:-"com.discordapp.Discord"}
-socat $SOCAT_ARGS \
-    UNIX-LISTEN:$XDG_RUNTIME_DIR/app/${FLATPAK_ID}/discord-ipc-0,forever,fork \
-    UNIX-CONNECT:$XDG_RUNTIME_DIR/discord-ipc-0 \
+OUR_SOCKET="${XDG_RUNTIME_DIR}/app/${FLATPAK_ID}/discord-ipc-0"
+DISCORD_SOCKET="${XDG_RUNTIME_DIR}/discord-ipc-0"
+
+rm -f "${OUR_SOCKET}"
+
+socat ${SOCAT_ARGS} \
+    "UNIX-LISTEN:${OUR_SOCKET},forever,fork" \
+    "UNIX-CONNECT:${DISCORD_SOCKET}/discord-ipc-0" \
     &
 socat_pid=$!
 
