@@ -46,6 +46,23 @@ To make Discord's launch options persistent, add them to `~/.var/app/com.discord
 --password-store=basic
 ```
 
+### Opening Discord automatically at system startup
+
+The Discord app has a built-in option for that, but it doesn't work on Flatpak mostly because of sandbox restrictions.
+
+But we can still do that manually, with these two commands:
+
+```sh
+mkdir -p ~/.config/autostart
+ln -s "$(flatpak info -l com.discordapp.Discord//stable | sed 's#/app/.*#/exports/share/applications/com.discordapp.Discord.desktop#')" ~/.config/autostart
+```
+
+To undo that, run:
+
+```sh
+rm ~/.config/autostart/com.discordapp.Discord.desktop
+```
+
 ## Legal
 
 The Discord app itself is **proprietary** (closed source).
