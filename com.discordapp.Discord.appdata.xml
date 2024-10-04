@@ -69,7 +69,7 @@
     <control>keyboard</control>
     <control>pointing</control>
   </supports>
-  <update_contact>tingping_at_fedoraproject.org</update_contact>
+  <update_contact>support@discordapp.com</update_contact>
   <releases>
     <release version="0.0.70" date="2024-10-01">
       <description/>
