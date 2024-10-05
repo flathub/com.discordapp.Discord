@@ -27,7 +27,6 @@
         "--talk-name=com.canonical.Unity",
         "--system-talk-name=org.freedesktop.UPower",
         "--env=XCURSOR_PATH=/run/host/user-share/icons:/run/host/share/icons",
-        "--env=XDG_CURRENT_SESSION=KDE",
         "--env=ELECTRON_TRASH=gio"
     ],
     "modules": [
