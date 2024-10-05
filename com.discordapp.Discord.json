@@ -67,31 +67,6 @@
             ],
             "modules": [
                 {
-                    "name": "pciutils",
-                    "disabled": true,
-                    "no-autogen": true,
-                    "make-args": [
-                        "SHARED=yes",
-                        "PREFIX=/app"
-                    ],
-                    "make-install-args": [
-                        "SHARED=yes",
-                        "PREFIX=/app"
-                    ],
-                    "sources": [
-                        {
-                            "type": "archive",
-                            "url": "https://github.com/pciutils/pciutils/archive/v3.13.0.tar.gz",
-                            "sha256": "861fc26151a4596f5c3cb6f97d6c75c675051fa014959e26fb871c8c932ebc67",
-                            "x-checker-data": {
-                                "type": "anitya",
-                                "project-id": 2605,
-                                "url-template": "https://github.com/pciutils/pciutils/archive/v$version.tar.gz"
-                            }
-                        }
-                    ]
-                },
-                {
                     "name": "socat",
                     "sources": [
                         {
