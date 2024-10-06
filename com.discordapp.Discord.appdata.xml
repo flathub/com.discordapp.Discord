@@ -12,7 +12,6 @@
   <url type="help">https://support.discord.com</url>
   <url type="bugtracker">https://support.discord.com/hc/categories/115000168371</url>
   <url type="contact">https://discord.com/company-information</url>
-  <url type="donation">https://discord.com/nitro</url>
   <launchable type="desktop-id">com.discordapp.Discord.desktop</launchable>
   <description>
     <p>Discord is a free all in one messaging, voice, and video client thats available on your computer and phone.</p>
