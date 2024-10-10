@@ -29,24 +29,16 @@
   </description>
   <screenshots>
     <screenshot type="default">
-      <image type="source">https://web.archive.org/web/20210930201229if_/https://discord.com/assets/882599fca31a23ad38bd47db302b2a00.png</image>
-      <caption>Talk on an invite only server</caption>
-    </screenshot>
-    <screenshot>
-      <image type="source">https://web.archive.org/web/20210930201229if_/https://discord.com/assets/43fb8531fc13f02eb5f3c3e16d7fd1a7.png</image>
-      <caption>Voice and Video</caption>
-    </screenshot>
-    <screenshot>
-      <image type="source">https://web.archive.org/web/20210930201229if_/https://discord.com/assets/8626705c42db1fee19fc95fff7480bf8.png</image>
+      <image type="source">https://support.discord.com/hc/article_attachments/19212887908119</image>
       <caption>Dark Mode Window</caption>
     </screenshot>
     <screenshot>
-      <image type="source">https://web.archive.org/web/20210930201229if_/https://discord.com/assets/783ec8164addfd314cab6b0fa4ef6fc5.png</image>
+      <image type="source">https://support.discord.com/hc/article_attachments/19212887914903</image>
       <caption>Light Mode Window</caption>
     </screenshot>
     <screenshot>
-      <image type="source">https://web.archive.org/web/20210930201229if_/https://discord.com/assets/489dc2b446be5c305571ad96b845c776.png</image>
-      <caption>Available on Linux, macOS, Windows, iOS, Android, and your web browser</caption>
+      <image type="source">https://support.discord.com/hc/article_attachments/4471411989015</image>
+      <caption>Voice/Video Chat</caption>
     </screenshot>
   </screenshots>
   <branding>
