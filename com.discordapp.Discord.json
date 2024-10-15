@@ -13,6 +13,7 @@
     "finish-args": [
         "--share=ipc",
         "--socket=x11",
+        "--socket=pcsc",
         "--socket=pulseaudio",
         "--share=network",
         "--device=all",
