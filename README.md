@@ -9,6 +9,11 @@ flatpak install flathub com.discordapp.Discord
 flatpak run com.discordapp.Discord
 ```
 
+## Reporting bugs
+
+If you're experiencing a problem exclusive to the Flatpak version of Discord, i.e. it doesn't happen when running the official deb or tar.gz packages unsandboxed, feel free to open an issue about it here.
+
+Otherwise, please use the [official bug report form](https://support.discord.com/hc/en-us/articles/1500006052822-How-to-Report-a-Bug) instead, as it increases the chances of a bug getting fixed.
 
 ## Differences in flatpak version
 
