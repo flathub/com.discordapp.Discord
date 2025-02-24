@@ -111,9 +111,17 @@
                 {
                     "type": "archive",
                     "dest-filename": "discord.tar.gz",
-                    "url": "https://dl.discordapp.net/apps/linux/0.0.74/discord-0.0.74.tar.gz",
-                    "sha256": "c9fda02ef0e0cc5d77720a4a1628821c661547ea7b8d9380477ecbd45e8c66f7",
-                    "strip-components": 0
+                    "url": "https://dl.discordapp.net/apps/linux/0.0.87/discord-0.0.87.tar.gz",
+                    "sha256": "db63e2e6b2347eeec0fd9a2a92320e0ed12798d42dd291419aca6587440ad004",
+                    "strip-components": 0,
+                    "x-checker-data": {
+                        "type": "json",
+                        "url": "https://discord.com/api/updates/stable?platform=linux",
+                        "version-query": ".name",
+                        "timestamp-query": ".pub_date",
+                        "url-query": "\"https://dl.discordapp.net/apps/linux/\\($version)/discord-\\($version).tar.gz\"",
+                        "is-main-source": true
+                    }
                 },
                 {
                     "type": "file",
