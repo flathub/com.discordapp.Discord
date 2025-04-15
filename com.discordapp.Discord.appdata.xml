@@ -36,10 +36,6 @@
       <image type="source">https://raw.githubusercontent.com/flathub/com.discordapp.Discord/50940340c71dd975d0eb959174b58f12c97f58d0/screenshot-light.png</image>
       <caption>Light Mode Window</caption>
     </screenshot>
-    <screenshot>
-      <image type="source">https://support.discord.com/hc/article_attachments/4471411989015</image>
-      <caption>Voice/Video Chat</caption>
-    </screenshot>
   </screenshots>
   <branding>
     <color type="primary" scheme_preference="light">#a0aaf3</color>
