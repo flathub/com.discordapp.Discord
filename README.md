@@ -31,13 +31,20 @@ However, this sandboxing prevents the following features from working:
 
 ### Wayland
 
-This package enables the flags to run on Wayland, however it is opt-in. To opt-in run:
+Wayland support is enabled by default since Discord 0.0.94 (released in 2025-05-05).
 
-```sh
-flatpak override --user --socket=wayland com.discordapp.Discord
+Please note that native window decorations are not enabled by default. To do so, add the following lines to your [persistent launch options](#persistent-launch-options):
+
+```
+--enable-features=WaylandWindowDecorations
+--ozone-platform-hint=auto
 ```
 
-To opt-out do the same with `--nosocket=wayland`.
+To disable Wayland support permanently, run:
+
+```
+flatpak override --user --nosocket=wayland com.discordapp.Discord
+```
 
 ### Persistent launch options
 
