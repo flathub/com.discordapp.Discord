@@ -36,8 +36,7 @@ WAYLAND_SOCKET=${WAYLAND_DISPLAY:-"wayland-0"}
 
 if [[ -e "$XDG_RUNTIME_DIR/${WAYLAND_SOCKET}" || -e "${WAYLAND_DISPLAY}" ]]
 then
-    # TODO: Investigate removing --disable-gpu-memory-buffer-video-frames once Discord updates to Electron 34+ (https://crbug.com/331796411)
-    FLAGS+=('--enable-features=WaylandWindowDecorations' '--ozone-platform-hint=auto' '--disable-gpu-memory-buffer-video-frames')
+    FLAGS+=('--enable-features=WaylandWindowDecorations' '--ozone-platform-hint=auto')
 fi
 
 disable-breaking-updates.py
