@@ -100,8 +100,6 @@
                 "install -Dm755 discord.sh /app/bin/com.discordapp.Discord",
                 "install -Dm755 disable-breaking-updates.py /app/bin",
                 "mv Discord /app/discord",
-                "chmod +x /app/discord/Discord",
-                "install -d /app/share/applications",
                 "install -Dm644 /app/discord/discord.desktop /app/share/applications/${FLATPAK_ID}.desktop",
                 "desktop-file-edit --set-key=Icon --set-value=com.discordapp.Discord --set-key=Exec --set-value='com.discordapp.Discord %U' --add-mime-type=x-scheme-handler/discord /app/share/applications/${FLATPAK_ID}.desktop",
                 "install -Dm644 com.discordapp.Discord.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg",
