@@ -101,9 +101,13 @@
                 "install -Dm755 disable-breaking-updates.py /app/bin",
                 "mv Discord /app/discord",
                 "install -Dm644 /app/discord/discord.desktop /app/share/applications/${FLATPAK_ID}.desktop",
-                "desktop-file-edit --set-key=Icon --set-value=com.discordapp.Discord --set-key=Exec --set-value='com.discordapp.Discord %U' --add-mime-type=x-scheme-handler/discord /app/share/applications/${FLATPAK_ID}.desktop",
                 "install -Dm644 com.discordapp.Discord.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg",
-                "install -Dm644 com.discordapp.Discord.appdata.xml /app/share/appdata/com.discordapp.Discord.appdata.xml",
+                "install -Dm644 com.discordapp.Discord.appdata.xml /app/share/appdata/com.discordapp.Discord.appdata.xml"
+            ],
+            "post-install": [
+                "desktop-file-edit --add-mime-type=x-scheme-handler/discord /app/share/applications/${FLATPAK_ID}.desktop",
+                "desktop-file-edit --set-key=Exec --set-value='com.discordapp.Discord %U' /app/share/applications/${FLATPAK_ID}.desktop",
+                "desktop-file-edit --set-key=Icon --set-value=com.discordapp.Discord /app/share/applications/${FLATPAK_ID}.desktop",
                 "patch-desktop-filename ${FLATPAK_DEST}/discord/resources/app.asar"
             ],
             "sources": [
