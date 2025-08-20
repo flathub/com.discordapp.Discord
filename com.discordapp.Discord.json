@@ -108,6 +108,7 @@
                 "desktop-file-edit --add-mime-type=x-scheme-handler/discord /app/share/applications/${FLATPAK_ID}.desktop",
                 "desktop-file-edit --set-key=Exec --set-value='com.discordapp.Discord %U' /app/share/applications/${FLATPAK_ID}.desktop",
                 "desktop-file-edit --set-key=Icon --set-value=com.discordapp.Discord /app/share/applications/${FLATPAK_ID}.desktop",
+                "desktop-file-edit --remove-key=Path /app/share/applications/${FLATPAK_ID}.desktop",
                 "patch-desktop-filename ${FLATPAK_DEST}/discord/resources/app.asar"
             ],
             "sources": [
