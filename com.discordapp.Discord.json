@@ -116,8 +116,8 @@
                 {
                     "type": "archive",
                     "dest-filename": "discord.tar.gz",
-                    "url": "https://dl.discordapp.net/apps/linux/0.0.115/discord-0.0.115.tar.gz",
-                    "sha256": "0d71a5a3da9d9894ea9ba45eb2fb296ae4346b02054ae61a95ca555c47d3c4ae",
+                    "url": "https://dl.discordapp.net/apps/linux/0.0.116/discord-0.0.116.tar.gz",
+                    "sha256": "3c5250574f9b61ee54847d7bfe91da50410ee711492ff29f686907ce23610959",
                     "strip-components": 0,
                     "x-checker-data": {
                         "type": "json",
