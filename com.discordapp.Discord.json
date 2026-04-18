@@ -91,7 +91,7 @@
                 "/bin/*.sh",
                 "/bin/filan",
                 "/bin/procan",
-                "/share"
+                "/share/man"
             ]
         },
         {
