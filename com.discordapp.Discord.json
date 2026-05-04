@@ -100,8 +100,8 @@
             "build-commands": [
                 "install -Dm755 discord.sh /app/bin/com.discordapp.Discord",
                 "install -Dm755 disable-breaking-updates.py /app/bin",
-                "mv Discord /app/discord",
-                "install -Dm644 /app/discord/discord.desktop /app/share/applications/${FLATPAK_ID}.desktop",
+                "install -Dm755 updater_bootstrap /app/bin",
+                "install -Dm644 discord.desktop /app/share/applications/${FLATPAK_ID}.desktop",
                 "install -Dm644 com.discordapp.Discord.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg",
                 "install -Dm644 com.discordapp.Discord.appdata.xml /app/share/appdata/com.discordapp.Discord.appdata.xml"
             ],
@@ -109,16 +109,14 @@
                 "desktop-file-edit --add-mime-type=x-scheme-handler/discord /app/share/applications/${FLATPAK_ID}.desktop",
                 "desktop-file-edit --set-key=Exec --set-value='com.discordapp.Discord %U' /app/share/applications/${FLATPAK_ID}.desktop",
                 "desktop-file-edit --set-key=Icon --set-value=com.discordapp.Discord /app/share/applications/${FLATPAK_ID}.desktop",
-                "desktop-file-edit --remove-key=Path /app/share/applications/${FLATPAK_ID}.desktop",
-                "patch-electron-desktop-filename ${FLATPAK_DEST}/discord/resources/app.asar"
+                "desktop-file-edit --remove-key=Path /app/share/applications/${FLATPAK_ID}.desktop"
             ],
             "sources": [
                 {
                     "type": "archive",
                     "dest-filename": "discord.tar.gz",
-                    "url": "https://dl.discordapp.net/apps/linux/0.0.135/discord-0.0.135.tar.gz",
-                    "sha256": "bccba8cf5391d1c2afadf4ff8a590d5c4b443f7cc4c3234687a016e624000f0b",
-                    "strip-components": 0,
+                    "url": "https://dl.discordapp.net/apps/linux/1.0.136/discord-1.0.136.tar.gz",
+                    "sha256": "2f582fee93aa4b67e1f00c8cda38541c2bb59fb82ee46bc886268066cea4415b",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://discord.com/api/updates/stable?platform=linux",
