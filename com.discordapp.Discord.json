@@ -115,8 +115,8 @@
                 {
                     "type": "archive",
                     "dest-filename": "discord.tar.gz",
-                    "url": "https://dl.discordapp.net/apps/linux/1.0.136/discord-1.0.136.tar.gz",
-                    "sha256": "2f582fee93aa4b67e1f00c8cda38541c2bb59fb82ee46bc886268066cea4415b",
+                    "url": "https://dl.discordapp.net/apps/linux/1.0.137/discord-1.0.137.tar.gz",
+                    "sha256": "9b2b7b451ae4a0d2dc8dd858be4252d6699c7b4f50f579a9025931431e0d555e",
                     "x-checker-data": {
                         "type": "json",
                         "url": "https://discord.com/api/updates/stable?platform=linux",
