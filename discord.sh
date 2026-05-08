@@ -46,7 +46,7 @@ then
     fi
 fi
 
-env TMPDIR="${XDG_CACHE_HOME}" ZYPAK_DISABLE_SANDBOX=1 zypak-wrapper "${XDG_CONFIG_HOME}/discord/${app_dir:-}/Discord" --enable-speech-dispatcher "${FLAGS[@]}" "$@"
+env TMPDIR="${XDG_CACHE_HOME}" ZYPAK_DISABLE_SANDBOX=1 zypak-wrapper "${XDG_CONFIG_HOME}/discord/${app_dir:-}/Discord" "${FLAGS[@]}" "$@"
 
 if [ "${invoke_socat}" = true ]
 then

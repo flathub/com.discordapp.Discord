@@ -75,6 +75,19 @@ To undo that, run:
 rm ~/.config/autostart/com.discordapp.Discord.desktop
 ```
 
+### Enabling text to speech support
+
+Chromium includes support for [Speech Dispatcher](https://github.com/brailcom/speechd), but it's currently opt-in. To enable it, run these two commands:
+
+```sh
+# Add the required permission
+flatpak override --user --filesystem=xdg-run/speech-dispatcher:ro com.discordapp.Discord
+# Add the required launch option
+echo '--enable-speech-dispatcher' >> ~/.var/app/com.discordapp.Discord/config/discord-flags.conf
+```
+
+Please note that you will also need a speech synthesizer installed (e.g. [Piper](https://github.com/OHF-Voice/piper1-gpl), [Festival](https://www.cstr.ed.ac.uk/projects/festival/), [eSpeak NG](https://github.com/espeak-ng/espeak-ng)), and at least version 0.12.0 of Speech Dispatcher for this setup to work seamlessly. The [Arch Wiki](https://wiki.archlinux.org/title/Speech_dispatcher) can also be helpful to set this up properly.
+
 ## Legal
 
 The Discord app itself is **proprietary** (closed source).

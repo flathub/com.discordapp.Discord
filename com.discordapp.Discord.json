@@ -23,7 +23,6 @@
         "--filesystem=xdg-pictures:ro",
         "--filesystem=xdg-download",
         "--filesystem=xdg-run/pipewire-0",
-        "--filesystem=xdg-run/speech-dispatcher",
         "--talk-name=org.kde.StatusNotifierWatcher",
         "--talk-name=com.canonical.AppMenu.Registrar",
         "--talk-name=com.canonical.indicator.application",
