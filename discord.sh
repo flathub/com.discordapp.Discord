@@ -32,8 +32,6 @@ then
     mapfile -t FLAGS <<< "$(grep -Ev '^\s*$|^#' "${XDG_CONFIG_HOME}/discord-flags.conf")"
 fi
 
-disable-breaking-updates.py
-
 # Run the updater if we're missing a symlink to Discord's main binary in $XDG_CONFIG_HOME/discord
 if [ ! -x "${XDG_CONFIG_HOME}/discord/Discord" ]
 then

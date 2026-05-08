@@ -98,7 +98,6 @@
             "buildsystem": "simple",
             "build-commands": [
                 "install -Dm755 discord.sh /app/bin/com.discordapp.Discord",
-                "install -Dm755 disable-breaking-updates.py /app/bin",
                 "install -Dm755 updater_bootstrap /app/bin",
                 "install -Dm644 discord.desktop /app/share/applications/${FLATPAK_ID}.desktop",
                 "install -Dm644 com.discordapp.Discord.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg",
@@ -136,10 +135,6 @@
                 {
                     "type": "file",
                     "path": "com.discordapp.Discord.svg"
-                },
-                {
-                    "type": "file",
-                    "path": "disable-breaking-updates.py"
                 }
             ]
         }
