@@ -36,6 +36,7 @@ fi
 if [ ! -x "${XDG_CONFIG_HOME}/discord/Discord" ]
 then
     echo 'Missing symlink created by Discord after installation, running updater_bootstrap first...' >&2
+    mkdir -p "${XDG_CONFIG_HOME}/discord"
     app_dir=$(updater_bootstrap --zenity "${XDG_CONFIG_HOME}/discord" stable https://updates.discord.com/)
     if [ $? -eq 0 ]
     then
