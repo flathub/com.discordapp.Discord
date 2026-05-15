@@ -38,11 +38,6 @@ then
     echo 'Missing symlink created by Discord after installation, running updater_bootstrap first...' >&2
     mkdir -p "${XDG_CONFIG_HOME}/discord"
     app_dir=$(updater_bootstrap --zenity "${XDG_CONFIG_HOME}/discord" stable https://updates.discord.com/)
-    if [ $? -eq 0 ]
-    then
-        echo "Patching desktop file in Discord's asar file..." >&2
-        patch-electron-desktop-filename "${XDG_CONFIG_HOME}/discord/${app_dir}/resources/app.asar"
-    fi
 fi
 
 env TMPDIR="${XDG_CACHE_HOME}" ZYPAK_DISABLE_SANDBOX=1 zypak-wrapper "${XDG_CONFIG_HOME}/discord/${app_dir:-}/Discord" "${FLAGS[@]}" "$@"
