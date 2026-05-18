@@ -62,8 +62,11 @@
   </supports>
   <update_contact>support@discordapp.com</update_contact>
   <releases>
-    <release version="1.0.138" date="2026-05-11">
+    <release version="1.0.139" date="2026-05-18">
       <description></description>
+    </release>
+    <release version="1.0.138" date="2026-05-11">
+      <description/>
     </release>
     <release version="1.0.137" date="2026-05-05">
       <description/>
