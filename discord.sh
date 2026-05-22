@@ -40,7 +40,7 @@ then
     app_dir=$(updater_bootstrap --zenity "${XDG_CONFIG_HOME}/discord" stable https://updates.discord.com/)
 fi
 
-env TMPDIR="${XDG_CACHE_HOME}" ZYPAK_DISABLE_SANDBOX=1 zypak-wrapper "${XDG_CONFIG_HOME}/discord/${app_dir:-}/Discord" "${FLAGS[@]}" "$@"
+env TMPDIR="${XDG_CACHE_HOME}" "${XDG_CONFIG_HOME}/discord/${app_dir:-}/Discord" --no-sandbox "${FLAGS[@]}" "$@"
 
 if [ "${invoke_socat}" = true ]
 then
