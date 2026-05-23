@@ -87,33 +87,154 @@ modules:
 
   - name: discord
     buildsystem: simple
+    build-options:
+      # Some Discord binary modules ship with debug symbols, make sure not to touch them.
+      no-debuginfo: true
+      strip: false
     build-commands:
+      - mkdir -p /app/discord/modules
+      # Extract the main Discord application
+      - brotli -cd discord.tar.br | tar xf - -C /app/discord --strip-components 1
+      # Extract Discord modules
+      - |
+        set -euo pipefail
+        for module in *_module.tar.br; do
+          target_dir=/app/discord/modules/${module%_*}
+          mkdir -p $target_dir
+          brotli -cdv -- $module | tar -xf - -C $target_dir --strip-components 1
+        done
       - install -Dm755 discord.sh /app/bin/com.discordapp.Discord
-      - install -Dm755 updater_bootstrap /app/bin
-      - install -Dm644 discord.desktop /app/share/applications/${FLATPAK_ID}.desktop
+      - install -Dm755 disable-breaking-updates.py /app/bin
+      - install -Dm644 Discord/discord.desktop /app/share/applications/${FLATPAK_ID}.desktop
       - install -Dm644 com.discordapp.Discord.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
       - install -Dm644 com.discordapp.Discord.appdata.xml /app/share/appdata/com.discordapp.Discord.appdata.xml
     post-install:
+      # HACK: Krisp fails to initialize if this directory is not present (or if can't be created). Logs:
+      #       MediaEngineStore] Failed to load Krisp module: Failed to setup Krisp module, error code: -4
+      #       [AVError] AV error reported: noise-canceller-error {"underlyingError":"NoiseCancellerError.KRISP_INIT_ERROR_GLOBAL_INIT"}
+      - mkdir -p /app/discord/modules/discord_krisp/KMS/logs
+      # HACK: Set the newUpdater key to false in build_info.json in order to disable the new Discord updater (released on 2026-05-04, version 1.0.136),
+      #       Also add a localModulesRoot key that points to the Discord modules we're packaging.
+      - |
+        set -e
+        jq '.newUpdater = false | .localModulesRoot = "/app/discord/modules"' /app/discord/resources/build_info.json > tmp.json
+        mv tmp.json /app/discord/resources/build_info.json
+      # HACK: Patch Discord's app.asar to fix the desktop filename to avoid window association issues, as recommended by the Flatpak documentation:
+      #       https://docs.flatpak.org/en/latest/electron.html#using-correct-desktop-file-name
+      - patch-electron-desktop-filename /app/discord/resources/app.asar
       - desktop-file-edit --add-mime-type=x-scheme-handler/discord /app/share/applications/${FLATPAK_ID}.desktop
       - desktop-file-edit --set-key=Exec --set-value='com.discordapp.Discord %U' /app/share/applications/${FLATPAK_ID}.desktop
       - desktop-file-edit --set-key=Icon --set-value=com.discordapp.Discord /app/share/applications/${FLATPAK_ID}.desktop
       - desktop-file-edit --remove-key=Path /app/share/applications/${FLATPAK_ID}.desktop
     sources:
+      - type: file
+        dest-filename: discord.tar.br
+        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.139/full.distro
+        sha256: deb0980d68578ef791f90b47cfb7c303cb8a26dd53e12567f3c8b1f10dbe778d
+        x-checker-data:
+          type: json
+          url: https://discord.com/api/updates/stable?platform=linux
+          version-query: .name
+          timestamp-query: .pub_date
+          url-query: '"https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/\($version)/full.distro"'
+          is-main-source: true
       - type: archive
         dest-filename: discord.tar.gz
+        strip-components: 0
         url: https://dl.discordapp.net/apps/linux/1.0.139/discord-1.0.139.tar.gz
         sha256: 7eacf2f46af49ddf2258f74d7b92f5e0f71f6a75b169d5205f4a8679b435063f
         x-checker-data:
           type: json
           url: https://discord.com/api/updates/stable?platform=linux
           version-query: .name
-          timestamp-query: .pub_date
           url-query: '"https://dl.discordapp.net/apps/linux/\($version)/discord-\($version).tar.gz"'
-          is-main-source: true
+      - type: file
+        dest-filename: discord_desktop_core_module.tar.br
+        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.139/discord_desktop_core/1/full.distro
+        sha256: e0d0befade0351ad91a2baf4106aa0f4b7a26d33f9b6271ff6b88b3082750cc8
+        x-checker-data:
+          type: json
+          url: https://discord.com/api/updates/stable?platform=linux
+          version-query: .name
+          url-query: '"https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/\($version)/discord_desktop_core/1/full.distro"'
+      # TODO: Figure out a way to properly check for updates for each Discord module listed below.
+      - type: file
+        dest-filename: discord_erlpack_module.tar.br
+        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.139/discord_erlpack/1/full.distro
+        sha256: 3f80341a901d8ec18ce2736976cf6d2bd9264e7663d85bb37f5355959fc0fe4d
+        x-checker-data:
+          type: json
+          url: https://discord.com/api/updates/stable?platform=linux
+          version-query: .name
+          url-query: '"https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/\($version)/discord_erlpack/1/full.distro"'
+      - type: file
+        dest-filename: discord_game_utils_module.tar.br
+        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.139/discord_game_utils/1/full.distro
+        sha256: 97e828e4f55db4993342f108637ba06ad8c43ee20c69007134585dd1d2991d40
+        x-checker-data:
+          type: json
+          url: https://discord.com/api/updates/stable?platform=linux
+          version-query: .name
+          url-query: '"https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/\($version)/discord_game_utils/1/full.distro"'
+      - type: file
+        dest-filename: discord_krisp_module.tar.br
+        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.139/discord_krisp/1/full.distro
+        sha256: 12f8698fc3254e047e802384c08c9d02f831e0e2fb34f4dc97f1e91a1140b394
+        x-checker-data:
+          type: json
+          url: https://discord.com/api/updates/stable?platform=linux
+          version-query: .name
+          url-query: '"https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/\($version)/discord_krisp/1/full.distro"'
+      - type: file
+        dest-filename: discord_rpc_module.tar.br
+        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.139/discord_rpc/1/full.distro
+        sha256: e5d4882aa7fb0fbfd5238c93a2af95166fd299e5d8653990faabb31c301877e8
+        x-checker-data:
+          type: json
+          url: https://discord.com/api/updates/stable?platform=linux
+          version-query: .name
+          url-query: '"https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/\($version)/discord_rpc/1/full.distro"'
+      - type: file
+        dest-filename: discord_spellcheck_module.tar.br
+        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.139/discord_spellcheck/1/full.distro
+        sha256: dd1131258e99bfa6444dd3aae3613364e86d6dde8298a6c2cb7977a77257487b
+        x-checker-data:
+          type: json
+          url: https://discord.com/api/updates/stable?platform=linux
+          version-query: .name
+          url-query: '"https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/\($version)/discord_spellcheck/1/full.distro"'
+      - type: file
+        dest-filename: discord_utils_module.tar.br
+        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.139/discord_utils/1/full.distro
+        sha256: 49a5224a75d71af40d03ab8e748dd6b36321bb64e3ee5152d93f30da670598da
+        x-checker-data:
+          type: json
+          url: https://discord.com/api/updates/stable?platform=linux
+          version-query: .name
+          url-query: '"https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/\($version)/discord_utils/1/full.distro"'
+      - type: file
+        dest-filename: discord_voice_module.tar.br
+        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.139/discord_voice/1/full.distro
+        sha256: abaacf163deafc09bd7e1b287fd68316ac2c90b6be6464bf53b048d1f5e24b92
+        x-checker-data:
+          type: json
+          url: https://discord.com/api/updates/stable?platform=linux
+          version-query: .name
+          url-query: '"https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/\($version)/discord_voice/1/full.distro"'
+      - type: file
+        dest-filename: discord_zstd_module.tar.br
+        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.139/discord_zstd/1/full.distro
+        sha256: 62510eaf144e93967a79b7837849410513e8c53e43cfc2b7c5e7e1396fd9b332
+        x-checker-data:
+          type: json
+          url: https://discord.com/api/updates/stable?platform=linux
+          version-query: .name
+          url-query: '"https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/\($version)/discord_zstd/1/full.distro"'
       - type: file
         path: discord.sh
       - type: file
         path: com.discordapp.Discord.appdata.xml
       - type: file
         path: com.discordapp.Discord.svg
-
+      - type: file
+        path: disable-breaking-updates.py

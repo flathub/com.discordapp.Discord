@@ -32,15 +32,10 @@ then
     mapfile -t FLAGS <<< "$(grep -Ev '^\s*$|^#' "${XDG_CONFIG_HOME}/discord-flags.conf")"
 fi
 
-# Run the updater if we're missing a symlink to Discord's main binary in $XDG_CONFIG_HOME/discord
-if [ ! -x "${XDG_CONFIG_HOME}/discord/Discord" ]
-then
-    echo 'Missing symlink created by Discord after installation, running updater_bootstrap first...' >&2
-    mkdir -p "${XDG_CONFIG_HOME}/discord"
-    app_dir=$(updater_bootstrap --zenity "${XDG_CONFIG_HOME}/discord" stable https://updates.discord.com/)
-fi
+# Disable auto-updates for Discord and its modules.
+disable-breaking-updates.py
 
-env TMPDIR="${XDG_CACHE_HOME}" ZYPAK_DISABLE_SANDBOX=1 zypak-wrapper "${XDG_CONFIG_HOME}/discord/${app_dir:-}/Discord" "${FLAGS[@]}" "$@"
+env TMPDIR="${XDG_CACHE_HOME}" zypak-wrapper /app/discord/Discord "${FLAGS[@]}" "$@"
 
 if [ "${invoke_socat}" = true ]
 then
