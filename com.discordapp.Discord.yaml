@@ -129,8 +129,8 @@ modules:
       - type: archive
         dest-filename: discord.tar.gz
         strip-components: 0
-        url: https://dl.discordapp.net/apps/linux/1.0.149/discord-1.0.149.tar.gz
-        sha256: 0408062bfee2ffc043c83ec9a8fd4dce752ddd789ba64919b267d246e60e5c86
+        url: https://dl.discordapp.net/apps/linux/1.0.150/discord-1.0.150.tar.gz
+        sha256: a379a4572de4f9fb3e53de26f6313a0cde00214cbe39dbfaea605166e22a56e4
         x-checker-data:
           is-main-source: true
           type: json
@@ -140,8 +140,8 @@ modules:
           url-query: '"https://dl.discordapp.net/apps/linux/\($version)/discord-\($version).tar.gz"'
       - type: file
         dest-filename: discord.tar.br
-        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.149/full.distro
-        sha256: 55c1c8fc8048f3a12b8fd2ee0089a4a16acca886803126873b809ed6888b4aea
+        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.150/full.distro
+        sha256: 15c591b11005f20c60c32fde9a4992be33153ff01689c98741a7ecb133376f78
         x-checker-data:
           type: json
           url: https://updates.discord.com/distributions/app/manifests/latest?channel=stable&platform=linux&arch=x64
@@ -149,8 +149,8 @@ modules:
           url-query: .full.url
       - type: file
         dest-filename: discord_desktop_core_module.tar.br
-        url: https://dl.discordapp.net/distro/app/stable/linux/x64/1.0.149/discord_desktop_core/1/full.distro
-        sha256: 271ebe5c4f908d71143607fb5ea17b0b3347789348153806f2a9e20a2b10f1d6
+        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.150/discord_desktop_core/1/full.distro
+        sha256: 551324457afff3ccde3c5a7953b50b0c6a7603b0ec82874d942c02c5d8f3d5bc
         x-checker-data:
           type: json
           url: https://updates.discord.com/distributions/app/manifests/latest?channel=stable&platform=linux&arch=x64
@@ -159,8 +159,8 @@ modules:
           url-query: .modules.discord_desktop_core.full.url
       - type: file
         dest-filename: discord_erlpack_module.tar.br
-        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.149/discord_erlpack/1/full.distro
-        sha256: b73fc908f16df9b03d133e91513d3e13d55fe560be2d768eca0c6c008cd43c96
+        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.150/discord_erlpack/1/full.distro
+        sha256: 2a42158aac41c4a108380e864097188bcd8514bca797448a69bf6d8c34cafb9f
         x-checker-data:
           type: json
           url: https://updates.discord.com/distributions/app/manifests/latest?channel=stable&platform=linux&arch=x64
@@ -169,8 +169,8 @@ modules:
           url-query: .modules.discord_erlpack.full.url
       - type: file
         dest-filename: discord_game_utils_module.tar.br
-        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.149/discord_game_utils/1/full.distro
-        sha256: 6c84de1f54dce5ca667b57065c2a50da75162cf59fdcac2908f54ff790a3836a
+        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.150/discord_game_utils/1/full.distro
+        sha256: 13f6bb80c8f869a070f5432f50b9b1fcc6cfb163533faab1b5643bb20502c32f
         x-checker-data:
           type: json
           url: https://updates.discord.com/distributions/app/manifests/latest?channel=stable&platform=linux&arch=x64
@@ -179,8 +179,8 @@ modules:
           url-query: .modules.discord_game_utils.full.url
       - type: file
         dest-filename: discord_krisp_module.tar.br
-        url: https://dl.discordapp.net/distro/app/stable/linux/x64/1.0.149/discord_krisp/1/full.distro
-        sha256: ee4e0af08702326e8dcfb896db24ff098a7b798ee99bd237557438236f2ea341
+        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.150/discord_krisp/1/full.distro
+        sha256: 1811db6472bd652290d37405f1abe6f6859e5ee4b55d61add5000ab571fe7d8f
         x-checker-data:
           type: json
           url: https://updates.discord.com/distributions/app/manifests/latest?channel=stable&platform=linux&arch=x64
@@ -189,8 +189,8 @@ modules:
           url-query: .modules.discord_krisp.full.url
       - type: file
         dest-filename: discord_rpc_module.tar.br
-        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.149/discord_rpc/1/full.distro
-        sha256: 1ef55920fdbe0bbeed1bb02222beb66a24b5f71775dd74071aa5ef3fdf8539bb
+        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.150/discord_rpc/1/full.distro
+        sha256: c45377a34ef847048b7b5b57e6512bce752c64b416f1073280fa37fa4c6d184a
         x-checker-data:
           type: json
           url: https://updates.discord.com/distributions/app/manifests/latest?channel=stable&platform=linux&arch=x64
@@ -199,8 +199,8 @@ modules:
           url-query: .modules.discord_rpc.full.url
       - type: file
         dest-filename: discord_spellcheck_module.tar.br
-        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.149/discord_spellcheck/1/full.distro
-        sha256: 26ebd6a40d6d33c5a95c4dccd861be1892baf1a3e868c0e68f21dc285980cb6e
+        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.150/discord_spellcheck/1/full.distro
+        sha256: 166a2d8d82cd248a42c2d9cc58493a4b80944e04772750e232fe7fdea18c4a50
         x-checker-data:
           type: json
           url: https://updates.discord.com/distributions/app/manifests/latest?channel=stable&platform=linux&arch=x64
@@ -209,8 +209,8 @@ modules:
           url-query: .modules.discord_spellcheck.full.url
       - type: file
         dest-filename: discord_utils_module.tar.br
-        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.149/discord_utils/1/full.distro
-        sha256: e6084f93011c40b510b063f8b75b6ebe368dc15c2052b59d53ce0ed3613f23d1
+        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.150/discord_utils/1/full.distro
+        sha256: d533918ee975dc9360b49be938eef5a28d8abc7425138bc6a216403bb2618457
         x-checker-data:
           type: json
           url: https://updates.discord.com/distributions/app/manifests/latest?channel=stable&platform=linux&arch=x64
@@ -219,8 +219,8 @@ modules:
           url-query: .modules.discord_utils.full.url
       - type: file
         dest-filename: discord_voice_module.tar.br
-        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.149/discord_voice/1/full.distro
-        sha256: 794d91dc7f4170e3c057bb34a5b94df1d26db55f0935019e849ca5d2ea760bd0
+        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.150/discord_voice/1/full.distro
+        sha256: 5946c0a29099806e0d1b932a7266fd02360965379cbc3a04897314fe4a03a42c
         x-checker-data:
           type: json
           url: https://updates.discord.com/distributions/app/manifests/latest?channel=stable&platform=linux&arch=x64
@@ -229,8 +229,8 @@ modules:
           url-query: .modules.discord_voice.full.url
       - type: file
         dest-filename: discord_zstd_module.tar.br
-        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.149/discord_zstd/1/full.distro
-        sha256: 7f655c3075b569a922e94154cee73c9353246010fc1aecb15592eaf0cb26e5cd
+        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.150/discord_zstd/1/full.distro
+        sha256: 5085859d55fa1fb9926f6b4a3304830d5e79a4c4b343e8f82100876be679fb78
         x-checker-data:
           type: json
           url: https://updates.discord.com/distributions/app/manifests/latest?channel=stable&platform=linux&arch=x64
