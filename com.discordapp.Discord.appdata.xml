@@ -6,6 +6,7 @@
     <name>Discord Inc.</name>
   </developer>
   <summary>Talk, play, hang out</summary>
+  <summary xml:lang="ru">Общайся, играй, зависай</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>LicenseRef-proprietary</project_license>
   <url type="homepage">https://discord.com</url>
@@ -15,26 +16,38 @@
   <launchable type="desktop-id">com.discordapp.Discord.desktop</launchable>
   <description>
     <p>Discord is a free all in one messaging, voice, and video client thats available on your computer and phone.</p>
+    <p xml:lang="ru">Discord — бесплатный клиент для переписки, голосового и видеообщения, доступный и на компьютере, и на телефоне.</p>
     <p>Whether you’re part of a school club, gaming group, worldwide art community, or just a handful of friends that want to spend time together, Discord makes it easy to talk every day and hang out more often.</p>
+    <p xml:lang="ru">Школьный кружок, игровое комьюнити, международное сообщество художников или просто компания друзей, которым хочется быть вместе, — с Discord легко общаться каждый день и чаще проводить время сообща.</p>
     <ul>
       <li>Talk to your friends with messaging, voice, and video in a "Direct Message" (1 other person), group chat (up to 10 people), or a multi-channel server (practically infinite maximum members).</li>
+      <li xml:lang="ru">Общайтесь с друзьями текстом, голосом и по видео — в личных сообщениях (один собеседник), групповом чате (до 10 человек) или на сервере с множеством каналов (число участников практически не ограничено).</li>
       <li>Discord servers are organized into topic-based channels where you can collaborate, share, and just talk about your day without clogging up a group chat.</li>
+      <li xml:lang="ru">Серверы Discord разделены на тематические каналы: в них можно работать сообща, делиться находками и просто рассказывать, как прошёл день, не засоряя общий чат.</li>
       <li>Grab a seat in a voice channel when you’re free. Friends in your server can see you’re around and instantly pop in to talk without having to call.</li>
+      <li xml:lang="ru">Загляните в голосовой канал, когда освободитесь. Друзья на сервере увидят, что вы на месте, и присоединятся к разговору сразу — без всяких звонков.</li>
       <li>Get a community of any size running with moderation tools and custom member access. Give members special powers, set up private channels, and more.</li>
+      <li xml:lang="ru">Развивайте сообщество любого размера: к вашим услугам инструменты модерации и гибкая настройка доступа. Выдавайте участникам особые права, создавайте закрытые каналы и не только.</li>
       <li>Low-latency voice and video feels like you’re in the same room. Wave hello over video, watch friends stream their games, or gather up and have a drawing session with screen share.</li>
+      <li xml:lang="ru">Голос и видео почти без задержек — ощущение, будто вы в одной комнате. Помашите друг другу по видеосвязи, посмотрите, как друзья стримят свои игры, или соберитесь порисовать вместе, включив демонстрацию экрана.</li>
       <li>Available on Linux, macOS, Windows, iOS, Android, and your web browser.</li>
+      <li xml:lang="ru">Работает на Linux, macOS, Windows, iOS, Android и прямо в браузере.</li>
     </ul>
     <p>Discord is written in Javascript, React, Elixir, and Rust. The desktop application uses the electron framework.</p>
+    <p xml:lang="ru">Discord написан на JavaScript, React, Elixir и Rust. Настольное приложение построено на фреймворке Electron.</p>
     <p>The flatpak version runs in a sandbox to provide better safety and privacy for users. However, this sandboxing prevents the following features from working out of the box: Game Activity, Unrestricted File Access, Rich Presence. Check the README in the Github repo for details.</p>
+    <p xml:lang="ru">Версия для Flatpak работает в песочнице — так безопаснее и лучше для приватности. Но из-за изоляции некоторые возможности не работают сразу после установки: игровая активность (Game Activity), неограниченный доступ к файлам и Rich Presence. Подробности — в файле README в репозитории на GitHub.</p>
   </description>
   <screenshots>
     <screenshot type="default">
       <image type="source">https://raw.githubusercontent.com/flathub/com.discordapp.Discord/50940340c71dd975d0eb959174b58f12c97f58d0/screenshot-dark.png</image>
       <caption>Dark Mode Window</caption>
+      <caption xml:lang="ru">Окно в тёмной теме</caption>
     </screenshot>
     <screenshot>
       <image type="source">https://raw.githubusercontent.com/flathub/com.discordapp.Discord/50940340c71dd975d0eb959174b58f12c97f58d0/screenshot-light.png</image>
       <caption>Light Mode Window</caption>
+      <caption xml:lang="ru">Окно в светлой теме</caption>
     </screenshot>
   </screenshots>
   <branding>
