@@ -168,8 +168,8 @@ modules:
           url-query: .full.url
       - type: file
         dest-filename: discord_desktop_core_module.tar.br
-        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.160/discord_desktop_core/1/full.distro
-        sha256: f12cf2566112aa71618b849b4b5cd9deb9cfbd957f5c93e88426754856e528f1
+        url: https://stable.dl2.discordapp.net/distro/app/stable/linux/x64/1.0.160/discord_desktop_core/2/full.distro
+        sha256: 79f078ff5514cfe2d076bcce4c580f873e67402ff63d31d4dbd32bb84c56dfc9
         x-checker-data:
           type: json
           url: https://updates.discord.com/distributions/app/manifests/latest?channel=stable&platform=linux&arch=x64
