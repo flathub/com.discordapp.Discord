@@ -4,6 +4,8 @@ base-version: '26.08'
 runtime: org.freedesktop.Platform
 runtime-version: '26.08'
 sdk: org.freedesktop.Sdk
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.golang
 command: com.discordapp.Discord
 separate-locales: false
 tags:
@@ -81,6 +83,23 @@ modules:
       - /bin/procan
       - /share/man
 
+  - name: go-asar
+    buildsystem: simple
+    build-options:
+      append-path: /usr/lib/sdk/golang/bin
+    build-commands:
+      - go build -o /app/bin/go-asar ./cmd/asar
+    sources:
+      - type: archive
+        url: https://github.com/dcboy/go-asar/archive/refs/tags/v0.1.0.tar.gz
+        sha256: a4a5e8459526f78c78b4b1d98a44ffca3de99a1e34d8176afc94507af3efdf3b
+        x-checker-data:
+          type: anitya
+          project-id: 393089
+          url-template: https://github.com/dcboy/go-asar/archive/refs/tags/v$version.tar.gz
+    cleanup:
+      - '*'
+  
   - name: discord
     buildsystem: simple
     build-options:
@@ -134,6 +153,14 @@ modules:
           mv -f "${model}" "${store}/${name}"
           ln -sfn "${writable}/${name}" "${voice}/${name}"
         done
+      # HACK: Discord version 1.0.0.147 began calling Electron's app.setDesktopName() API to set the desktop file.
+      #       The problem is that they use "discord" as the desktop file name, and this Flatpak package uses a different one.
+      #       So we must to set the correct desktop file in order for the badge for unread messages to show up.
+      - go-asar extract /app/discord/resources/app.asar /app/app-asar-unpacked
+      - grep -Fq 'app.setDesktopName?.(packageName)' /app/app-asar-unpacked/bundle.js
+      - sed -i 's/app\.setDesktopName?.(packageName)/app.setDesktopName?.("com.discordapp.Discord")/' /app/app-asar-unpacked/bundle.js
+      - go-asar pack /app/app-asar-unpacked /app/discord/resources/app.asar
+      - rm -rf /app/app-asar-unpacked
       # HACK: Patch Discord's app.asar to fix the desktop filename to avoid window association issues, as recommended by the Flatpak documentation:
       #       https://docs.flatpak.org/en/latest/electron.html#using-correct-desktop-file-name
       - patch-electron-desktop-filename /app/discord/resources/app.asar
